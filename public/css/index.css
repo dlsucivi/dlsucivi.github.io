@@ -52,7 +52,6 @@ body {
     letter-spacing: 1px;
     color: black;
     text-decoration: none;
-    margin-left: 20px;
 
     display: flex;
     flex-direction: column;
@@ -277,7 +276,7 @@ i {
 @media (max-width: 1000px) {
 
     #container {
-        width: 85%;
+        width: 90%;
     }
 
     #header {
@@ -285,8 +284,12 @@ i {
     }
 
     #header-logo {
-        width: 75px;
-        height: 75px;
+        width: 72px;
+        height: 72px;
+    }
+
+    #title-name {
+        margin-left: 10px;
     }
 
     .title-name-small {
@@ -342,6 +345,10 @@ i {
     #header-logo {
         width: 100px;
         height: 100px;
+    }
+
+    #title-name {
+        margin-left: 20px;
     }
 
     .title-name-small {
