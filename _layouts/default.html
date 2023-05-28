@@ -16,7 +16,7 @@
     {% if page.additional_css %}
         <link rel="stylesheet" type="text/css" href={{page.css}}>
     {% endif %} -->
-    <!-- <script src="https://kit.fontawesome.com/d0b33fad77.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/d0b33fad77.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="container">
@@ -26,6 +26,7 @@
                 {{ content }}
             </div>
         </div>
+        {% include footer.html %}
     </div>
 </body>
 </html>

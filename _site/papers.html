@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title> CIVI | Papers </title>
+    <title> Center for Computational Imaging & Visual Innovations | Papers </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <!-- <link rel="shortcut icon" type="image/jpg" href="public/images/favicon.png"/> -->
     <link rel="stylesheet" type="text/css" href="public/css/index.css"><!--
      -->
-    <!-- <script src="https://kit.fontawesome.com/d0b33fad77.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/d0b33fad77.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="container">
@@ -22,13 +22,13 @@
     <h1 id="title">
         <img src="/public/images/CIVI_logo.png" id="header-logo">
         <a href="/" id="title-name">
-            <div id="title-name-small"> CENTER FOR </div>
+            <div class="title-name-small"> CENTER FOR </div>
             <div class="title-name-big"> COMPUTATIONAL IMAGING & </div>
             <div class="title-name-big"> VISUAL INNOVATIONS </div>
         </a>
-        <!-- <span id="title-research"> Computer Vision</span> -->
     </h1>
     <nav id="nav-bar">
+        <a class="link nav-item" id="header-about" href="/about"> ABOUT </a>
         <a class="link nav-item" id="header-papers" href="/papers"> PAPERS </a>
         <a class="link nav-item" id="header-people" href="/people"> PEOPLE </a>
     </nav>
@@ -37,6 +37,7 @@
         <button id="nav-bar-drop-button" class="dropdown-button"><i class="fas fa-bars"></i></button>
         <div class="dropdown-content right">
             <a class="link nav-item" id="header-home" href="/"> Home </a>
+            <a class="link nav-item" id="header-about" href="/"> About </a>
             <a class="link nav-item" id="header-papers" href="/publications"> Papers </a>
             <a class="link nav-item" id="header-people" href="/cv"> People </a>
         </div>
@@ -45,12 +46,53 @@
 
         <div id="wrapper">
             <div id="content">
-                <div id="index-main-content">
+                <div id="main-content">
     Papers - Under Construction
 </div>
 
             </div>
         </div>
+        <div id="footer">
+    <div id="footer-detail-container">
+        <div id="footer-name-container">
+            <a href="/" class="link">
+                <p id="footer-name" class="link footer-text"> Center for Computational Imaging and Visual Innovations </p>
+            </a>
+            <a href="https://www.dlsu.edu.ph/research/research-centers/adric/" target="_blank" class="link">
+                <p class="link footer-text"> Advanced Research Institute for Informatics, Computing and Networking </p>
+            </a>
+            <a href="https://www.dlsu.edu.ph/colleges/ccs/" target="_blank" class="link">
+                <p class="link footer-text"> College of Computer Studies </p>
+            </a>
+            <a href="https://www.dlsu.edu.ph/" target="_blank" class="link">
+                <p class="link footer-text"> De La Salle University </p>
+            </a>
+        </div>
+    </div>
+    <div id="footer-link-container">
+        <div class="footer-link" id="footer-email">
+            <i class="fas fa-envelope footer-text" id="footer-email-icon"></i>
+            <a href="mailto:dlsu.civi@gmail.com" class="link footer-text" id="footer-email-text"> Email </a>
+        </div>
+        <div class="footer-link" id="footer-git">
+            <i class="fab fa-github footer-text" id="footer-git-icon"></i>
+            <a href="https://github.com/dlsucivi/" class="link footer-text" id="footer-git-text" target="_blank"> GitHub </a>
+        </div>
+        <div class="footer-link" id="footer-fb">
+            <i class="fab fa-facebook footer-text" id="footer-fb-icon"></i>
+            <a href="https://www.facebook.com/dlsucivi/" class="link footer-text" id="footer-fb-text" target="_blank"> Facebook </a>
+        </div>
+        <div class="footer-link" id="footer-tw">
+            <i class="fab fa-twitter footer-text" id="footer-tw-icon"></i>
+            <a href="https://twitter.com/dlsucivi" class="link footer-text" id="footer-tw-text" target="_blank"> Twitter </a>
+        </div>
+        <div class="footer-link" id="footer-yt">
+            <i class="fab fa-youtube footer-text" id="footer-yt-icon"></i>
+            <a href="https://www.youtube.com/@dlsucivi" class="link footer-text" id="footer-yt-text" target="_blank"> YouTube </a>
+        </div>
+    </div>
+</div>
+
     </div>
 </body>
 </html>
