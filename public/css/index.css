@@ -258,16 +258,6 @@ i {
     padding: 10px 0;
 }
 
-#index-teaser-images {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-#index-teaser-images img {
-    width: 32%;
-}
-
 #index-description {
     margin-top: 40px;
 }
@@ -299,6 +289,20 @@ i {
     .title-name-big {
         font-size: 20px;
         line-height: 20px;
+    }
+
+    #index-teaser-images {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #index-teaser-pic1{
+        display: none;
+    }
+
+    #index-teaser-pic2, #index-teaser-pic3 {
+        width: 48%;
     }
 
     #nav-bar {
@@ -358,6 +362,16 @@ i {
     .title-name-big {
         font-size: 30px;
         line-height: 28px;
+    }
+
+    #index-teaser-images {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #index-teaser-images img {
+        width: 32%;
     }
 
     #nav-bar {
