@@ -1,0 +1,21 @@
+title: Center for Computational Imaging and Visual Innovations
+author: Arren Matthew C. Antioquia
+email: arren.antioquia[at]dlsu.edu.ph
+description: Towards solving real-world problems through deep learning solutions trained on visual data
+baseurl: ""
+url: "https://dlsucivi.github.io"
+
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+# Kramdown settings
+kramdown:
+  input: GFM
+
+# # Highlighter settings
+# highlighter: rouge
+
+# exclude: [vendor]
