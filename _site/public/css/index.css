@@ -105,15 +105,15 @@ body {
     align-items: flex-start;
 }
 
-#index-description {
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.2px;
-    line-height: 25px;
+div.footer-link {
+    display: flex;
+    align-items: flex-start;
 }
 
-i {
-    width: 25px;
+div.footer-link i::before {
+    font-size: 12px;
+    color: #A6A6A6;
+    margin-right: 10px;
 }
 
 .dropdown-button {
@@ -259,7 +259,53 @@ i {
 }
 
 #index-description {
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+
     margin-top: 40px;
+}
+
+.subsection-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 40px;
+    font-size: 22px;
+}
+
+.subsubsection:nth-child(2) {
+    margin-top: 25px;
+}
+
+.subsubsection {
+    margin-top: 50px;
+}
+
+.subsubsection h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: 20px;
+}
+
+.content-small {
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+    margin-top: 15px;
+}
+
+.subsubsection ol {
+    margin-top: 20px;
+    list-style-position: inside;
+}
+
+.subsubsection ol li {
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    line-height: 22px;
 }
 
 /* mobile */
@@ -321,13 +367,6 @@ i {
         flex-direction: column;
     }
 
-    #index-avatar {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin: auto;
-    }
-
     #main-title {
         font-size: 24px;
         text-align: center;
@@ -387,12 +426,7 @@ i {
         align-items: flex-start;
     }
 
-    #index-avatar {
-        width: 175px;
-        height: 175px;
-    }
-
     #main-title {
-        font-size: 22px;
+        font-size: 26px;
     }
 }
