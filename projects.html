@@ -1,0 +1,43 @@
+---
+layout: default
+title: Center for Computational Imaging & Visual Innovations | Projects
+additional_css: true
+css: public/css/projects.css
+---
+<h2 id="main-title"> PROJECTS </h2>
+<div id="main-content">
+    <div id="projects-div">
+        <p class="content-small">
+            Here are the updated list of research projects conducted by our researchers.
+        </p>
+    </div>
+    <div id="projects-list-div">
+    {% for project in site.data.projects %}
+        <div class="content-row">
+            <div class="content-col1">
+                <a href="/"> <img class="project-img" src={{ project.image }}> </a>
+            </div>
+            <div class="content-col2">
+                <a href="{{ project.links.website }}" class="content-emp subsubsection-title link"> {{ project.title }} </a>
+                <p class="body-text">
+                {%- for author in project.authors -%}
+                    {%- if author.emphasis -%}
+                        <a href="{{ author.link }}" class="content-emp body-text link">{{- author.name -}}</a>
+                    {%- else -%}
+                        {{- author.name -}}
+                    {%- endif -%}
+                    {% if forloop.last %}{% else %}, {% endif %}
+                {%- endfor -%}
+                </p>
+                <p class="body-text project-desc">{{ project.description }}</p>
+                <div class="project-links">
+                    <a href="{{ project.links.website }}" class="body-text link">[Project Website]</a>
+                    <a href="{{ project.links.code }}" class="body-text link">[Code]</a>
+                    <a href="{{ project.links.paper }}" class="body-text link">[Paper]</a>
+                    <a href="{{ project.links.citation }}" class="body-text link">[Citation]</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
