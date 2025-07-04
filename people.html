@@ -1,7 +1,63 @@
 ---
 layout: default
 title: Center for Computational Imaging & Visual Innovations | People
+additional_css: true
+css: public/css/people.css
 ---
+<h2 id="main-title"> PEOPLE </h2>
 <div id="main-content">
-    People - Under Construction
+    <div id="people-faculty-list-div" class="people-list-div">
+        <h3 class="subsection-title"> Faculty Members </h3>
+        <div class="people-list-div-container">
+            {% for person in site.data.faculty %}
+                <div class="content-row">
+                    <div class="content-col1">
+                        <a href="/"> <img class="person-img" src="/public/images/faculty/{{ person.image }}"> </a>
+                    </div>
+                    <div class="content-col2">
+                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
+                        <p class="body-text content-it"> {{ person.degree }} </p>
+                        <p class="body-text"> {{ person.specialization }} </p>
+                        <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="people-bsmscs-list-div" class="people-list-div">
+        <h3 class="subsection-title"> BSMSCS Student </h3>
+        <div class="people-list-div-container">
+            {% for person in site.data.bsmscs %}
+                <div class="content-row">
+                    <div class="content-col1">
+                        <a href="/"> <img class="person-img" src="/public/images/students/{{ person.image }}"> </a>
+                    </div>
+                    <div class="content-col2">
+                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
+                        <p class="body-text content-it"> {{ person.degree }} </p>
+                        <!-- <p class="body-text"> {{ person.specialization }} </p> -->
+                        <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="people-bs-list-div" class="people-list-div">
+        <h3 class="subsection-title"> Undergraduate Students </h3>
+        <div class="people-list-div-container">
+            {% for person in site.data.undergraduate %}
+                <div class="content-row">
+                    <div class="content-col1">
+                        <a href="/"> <img class="person-img" src="/public/images/students/{{ person.image }}"> </a>
+                    </div>
+                    <div class="content-col2">
+                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
+                        <p class="body-text content-it"> {{ person.degree }} </p>
+                        <!-- <p class="body-text"> {{ person.specialization }} </p> -->
+                        <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
