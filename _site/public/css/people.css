@@ -23,11 +23,11 @@
 @media (max-width: 1000px) {
 
     .content-col1 {
-        width: 25%;
+        width: 80px;
     }
 
     .content-col2 {
-        width: 75%;
+        width: 60%;
         margin-left: 20px;
     }
 }
