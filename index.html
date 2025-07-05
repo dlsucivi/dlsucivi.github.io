@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Center for Computational Imaging & Visual Innovations | Home
+additional_css: true
+css: public/css/news.css
 ---
 <div id="index-main-content">
     <div id="index-teaser-images">
@@ -11,4 +13,33 @@ title: Center for Computational Imaging & Visual Innovations | Home
     <p id="index-description">
     The Center for Computational Imaging & Visual Innovations (CIVI) is a research center under the Advanced Research Institute for Informatics, Computing, and Networking (AdRIC) at De La Salle University. We specialize in research projects centered towards solving real-world problems through deep learning solutions trained on visual data. Research projects under CIVI focus on specific goals, particularly (1) data collection, (2) model building and optimization, and (3) application development.
     </p>
+    <h2 id="main-title"> NEWS </h2>
+    {% for news in site.data.news %}
+        <div class="news-div">
+            {% if news.type == "Acad Lecture" %}
+                <p class="news-label news-label-acad news-text">Acad Lecture</p>
+                <p class="news-text news-body-text"> {{ news.date }} - Our {{ news.presenter_type}}, {{ news.presenter }}, presented an academic lecture entitled "{{ news.title }}" </p>
+            {% endif %}
+
+            {% if news.type == "Tech Workshop" %}
+                <p class="news-label news-label-workshop news-text">Tech Workshop</p>
+                <p class="news-text news-body-text"> {{ news.date }} - Our {{ news.presenter_type}}, {{ news.presenter }}, presented a technical workshop entitled "{{ news.title }}" </p>
+            {% endif %}
+
+            {% if news.type == "Conference Presentation" %}
+                <p class="news-label news-label-conf-pres news-text">Conf. Presentation</p>
+                <p class="news-text news-body-text"> {{ news.date }} - Our {{ news.presenter_type}}, {{ news.presenter }}, presented a research paper entitled "{{ news.title }}" at the {{ news.event_name }} held in {{ news.event_venue }}. </p>
+            {% endif %}
+
+            {% if news.type == "Conference Organizer" %}
+                <p class="news-label news-label-conf-org news-text">Conf. Organizer</p>
+                <p class="news-text news-body-text"> {{ news.date }} - Our {{ news.presenter_type}}, {{ news.presenter }}, served as the {{ news.event_position}} for the {{ news.title }} at the {{ news.event_name }} held in {{ news.event_venue }}. </p>
+            {% endif %}
+
+            {% if news.type == "Faculty Engagement" %}
+                <p class="news-label news-label-fac-eng news-text">Faculty Engagement</p>
+                <p class="news-text news-body-text"> {{ news.date }} - Our {{ news.presenter_type}}, {{ news.presenter }}, delivered a presentation entitled "{{ news.title }}" at the {{ news.event_name }} held in {{ news.event_venue }}. </p>
+            {% endif %}
+        </div>
+    {% endfor %}
 </div>
