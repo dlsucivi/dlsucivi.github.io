@@ -1,0 +1,137 @@
+[
+    {
+        "type": "Acad Lecture",
+        "date": "2025 July 5",
+        "title": "Exploring Multimodal Object Detection",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Matthew Ryan Carandang",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 June 28",
+        "title": "Small Object Detection: Tiny Targets, Big Problems",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Rafael Subo Yap",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 June 28",
+        "title": "Transfer Learning for Medical Image Classification",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Christian Tia",
+        "link": "#"
+    },
+    {
+        "type": "Tech Workshop",
+        "date": "2025 June 4",
+        "title": "Development and Evaluation of Object Segmentation Networks",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Aaron Gabrielle Dichoso",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 May 28",
+        "title": "Introduction and Evolution of Object Segmentation",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Aaron Gabrielle Dichoso",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 March 12",
+        "title": "An Introduction to Residual Learning for Computer Vision",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Aaron Gabrielle Dichoso",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 March 5",
+        "title": "Super-Resolution: Spotting the Unseen, Seeing the Unthinkable",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Ricardo Luis Vicerra",
+        "link": "#"
+    },
+    {
+        "type": "Tech Workshop",
+        "date": "2025 Feb 19",
+        "title": "Building YOLO from Scratch using PyTorch",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Juan Carlo Azarcon",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 Feb 12",
+        "title": "Exploring the Evolution of YOLO Models",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Juan Carlo Azarcon",
+        "link": "#"
+    },
+    {
+        "type": "Tech Workshop",
+        "date": "2025 Feb 8",
+        "title": "Implementing Decoupling for FGVC Tasks with Noisy Labels",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Kate Justine Ermitano",
+        "link": "#"
+    },
+    {
+        "type": "Acad Lecture",
+        "date": "2025 Feb 1",
+        "title": "Decoupling for Robust Fine-Grained Visual Classification with Noisy Labels",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Kate Justine Ermitano",
+        "link": "#"
+    },
+    {
+        "type": "Faculty Engagement",
+        "date": "2024 Oct 28",
+        "title": "Computer Vision in Agriculture",
+        "event_name": "10th DOST-Balik Scientist Program (BSP) Annual Convention ",
+        "event_venue": "Philippine International Convention Center (PICC)",
+        "presenter_type": "faculty member",
+        "presenter": "Dr. John Jethro Virtusio",
+        "link": "#"
+    },
+    {
+        "type": "Tech Workshop",
+        "date": "2024 Oct 30",
+        "title": "Introduction to Object Detection with YOLOv8",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Juan Carlo Azarcon",
+        "link": "#"
+    },
+    {
+        "type": "Conference Organizer",
+        "date": "2024 Oct 18 - 20",
+        "title": "Machine Learning Models for Biomedical Image Classification Session",
+        "event_name": "International Conference on Biomedical Imaging and Signal Processing (ICBSP)",
+        "event_venue": "Hong Kong",
+        "event_position": "session chair",
+        "presenter_type": "lab head",
+        "presenter": "Arren Matthew Antioquia",
+        "link": "#"
+    },
+    {
+        "type": "Conference Presentation",
+        "date": "2024 Oct 18 - 20",
+        "title": "Classifying Skin Diseases using Convolutional Neural Networks",
+        "event_name": "International Conference on Biomedical Imaging and Signal Processing (ICBSP)",
+        "event_venue": "Hong Kong",
+        "presenter_type": "lab head",
+        "presenter": "Arren Matthew Antioquia",
+        "link": "#"
+    },
+    {
+        "type": "Tech Workshop",
+        "date": "2024 Oct 9",
+        "title": "Building an Image Classifier using PyTorch",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Joseph Thomas Año",
+        "link": "#"
+    },
+]
