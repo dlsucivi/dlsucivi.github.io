@@ -1,0 +1,28 @@
+[
+    {
+        "title": "HAHANet: Towards Accurate Image Classifiers with Less Parameters",
+        "image": "/public/images/hahanet.svg",
+        "authors": [
+            {
+                "name": "Arren Matthew C. Antioquia",
+                "link": "https://arvention.github.io/",
+                "emphasis": "true"
+            },
+            {
+                "name": "Macario Cordel II"
+            }
+        ],
+        "publication": {
+            "name": "Pacific-Rim Symposium on Image and Video Technology (PSIVT)",
+            "date": "2023"
+        },
+        "description": "We propose an efficient convolutional block which minimizes the computational requirements of a network. Our approach achieves state-of-the-art accuracy on several challenging fine-grained classification tasks. More importantly, HAHANet outperforms top networks while reducing parameter count by at most 54 times.",
+        "links": {
+            "website": "https://dlsucivi.github.io/HAHANet-PyTorch",
+            "code": "https://github.com/dlsucivi/HAHANet-PyTorch",
+            "paper": "https://link.springer.com/chapter/10.1007/978-981-97-0376-0_19",
+            "citation": "https://dlsucivi.github.io/HAHANet-PyTorch/#citation"
+        }
+    },
+    
+]
