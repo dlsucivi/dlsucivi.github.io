@@ -1,13 +1,5 @@
 [
     {
-        "name": "Joseph Thomas Año",
-        "email": "joseph_ano[at]dlsu.edu.ph",
-        "degree": "BSMSCS (Ongoing)",
-        "specialization": "Lorem ipsum",
-        "link": "#",
-        "image": "ano.jpg"
-    },
-    {
         "name": "Juan Carlo Azarcon",
         "email": "juan_azarcon[at]dlsu.edu.ph",
         "degree": "BSMSCS (Ongoing)",
@@ -54,5 +46,13 @@
         "specialization": "Lorem ipsum",
         "link": "#",
         "image": "yap_rafael.jpg"
+    },
+    {
+        "name": "Marxandrea Diane Cabato",
+        "email": "marxandrea_cabato[at]dlsu.edu.ph",
+        "degree": "BSMSCS (Ongoing)",
+        "specialization": "Lorem ipsum",
+        "link": "#",
+        "image": "cabato.jpeg"
     },
 ]

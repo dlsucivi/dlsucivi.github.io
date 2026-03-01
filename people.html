@@ -25,7 +25,7 @@ css: public/css/people.css
         </div>
     </div>
     <div id="people-bsmscs-list-div" class="people-list-div">
-        <h3 class="subsection-title"> BSMSCS Student </h3>
+        <h3 class="subsection-title"> BSMSCS Students </h3>
         <div class="people-list-div-container">
             {% for person in site.data.bsmscs %}
                 <div class="content-row">
@@ -55,6 +55,21 @@ css: public/css/people.css
                         <p class="body-text content-it"> {{ person.degree }} </p>
                         <!-- <p class="body-text"> {{ person.specialization }} </p> -->
                         <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="people-graduate-list-div" class="people-list-div">
+        <h3 class="subsection-title"> Graduates </h3>
+        <div class="people-list-div-container">
+            {% for person in site.data.graduates %}
+                <div class="content-row-min">
+                    <div class="content-single-col">
+                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
+                        <p class="body-text content-it"> {{ person.degree }} </p>
+                        <!-- <p class="body-text"> {{ person.specialization }} </p> -->
+                        <!-- <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a> -->
                     </div>
                 </div>
             {% endfor %}

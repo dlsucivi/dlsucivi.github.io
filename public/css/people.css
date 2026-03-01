@@ -1,4 +1,4 @@
-.content-row {
+.content-row, .content-row-min {
     margin-top: 20px;
 }
 
@@ -17,6 +17,10 @@
     box-sizing: border-box;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.content-single-col {
+    width: 100%;
 }
 
 /* mobile */
@@ -42,6 +46,10 @@
 
     .content-row {
         width: 50%;
+    }
+
+    .content-row-min {
+        width: 25%;
     }
 
     .content-col1 {
