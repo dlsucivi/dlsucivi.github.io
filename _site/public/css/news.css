@@ -54,7 +54,7 @@
 
 .intro h1 {
     margin: 0 0 18px;
-    color: var(--civi-navy);
+    color: #000000;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
     letter-spacing: -0.035em;
@@ -108,7 +108,7 @@
 
 .section-heading h2 {
     margin: 0;
-    color: var(--civi-navy);
+    color: #000000;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 700;
     letter-spacing: -0.025em;

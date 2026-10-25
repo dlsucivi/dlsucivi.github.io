@@ -336,7 +336,7 @@ div.footer-link i::before {
 
 .footer-brand a,
 .footer-column a {
-    color: #dce7f5;
+    color: #ffffff;
     font-size: var(--font-sm);
     line-height: 1.7;
     letter-spacing: 0.2px;
@@ -376,7 +376,7 @@ div.footer-link i::before {
 
 .footer-social i {
     width: 16px;
-    color: #b7d9cd;
+    color: #ffffff;
     font-size: var(--font-md-sm);
     text-align: center;
 }
@@ -391,7 +391,7 @@ div.footer-link i::before {
 
     .header-main,
     .footer-main {
-        padding: 30px auto 30px;
+        padding: 30px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -442,13 +442,9 @@ div.footer-link i::before {
     }
 
     .footer-main {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
+        grid-template-columns: 1fr;
         gap: 32px;
-        padding-right: 12px;
-        padding-left: 12px;
-    }
-
-    .footer-bottom {
         padding-right: 12px;
         padding-left: 12px;
     }
@@ -466,7 +462,7 @@ div.footer-link i::before {
     .footer-main {
         margin-left: auto;
         margin-right: auto;
-        padding: 40px auto 40px;
+        padding: 50px;
     }
 
     #header-logo {
@@ -498,24 +494,5 @@ div.footer-link i::before {
 
     #main-title {
         font-size: var(--font-title);
-    }
-}
-
-/* Small-screen footer adjustments */
-@media (max-width: 580px) {
-    #footer.footer {
-        margin-top: 48px;
-        padding-top: 32px;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding-bottom: 30px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 5px;
     }
 }
