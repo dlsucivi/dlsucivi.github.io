@@ -22,14 +22,14 @@
 
 </head>
 <body>
+    {% include header.html %}
     <div id="container">
-        {% include header.html %}
         <div id="wrapper">
             <div id="content">
                 {{ content }}
             </div>
         </div>
-        {% include footer.html %}
     </div>
+    {% include footer.html %}
 </body>
 </html>
