@@ -1,0 +1,133 @@
+
+#about-div {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+#about-div .content-small {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    margin-top: 20px;
+}
+
+#research-programs-div {
+    margin-top: 3.5rem;
+}
+
+#research-programs-div > .subsection-title {
+    padding-top: 0;
+    font-size: 1.375rem;
+    line-height: 1.4;
+}
+
+#research-programs-div .subsubsection {
+    margin-top: 1.5rem;
+    padding-top: 1.75rem;
+}
+
+#research-programs-div .subsubsection h4,
+#research-programs-div .subsubsection-title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+#research-programs-div .content-small {
+    max-width: 900px;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    margin-top: 1rem;
+}
+
+#research-programs-div .subsubsection ol {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style-position: outside;
+}
+
+#research-programs-div .subsubsection ol li {
+    padding-left: 0.35rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+}
+
+#research-programs-div .subsubsection ol li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    #about-div {
+        max-width: 100%;
+    }
+
+    #about-div .content-small {
+        font-size: 1.0625rem;
+        line-height: 1.75;
+    }
+
+    #research-programs-div {
+        margin-top: 2.75rem;
+    }
+
+    #research-programs-div > .subsection-title {
+        font-size: 1.25rem;
+    }
+
+    #research-programs-div .subsubsection {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    #research-programs-div .subsubsection h4,
+    #research-programs-div .subsubsection-title {
+        font-size: 1.1875rem;
+    }
+
+    #research-programs-div .content-small {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    #research-programs-div .subsubsection ol {
+        padding-left: 1.25rem;
+    }
+
+    #research-programs-div .subsubsection ol li {
+        padding-left: 0.25rem;
+        margin-bottom: 0.65rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 580px) {
+    #research-programs-div {
+        margin-top: 2.25rem;
+    }
+
+    #research-programs-div > .subsection-title {
+        font-size: 1.1875rem;
+    }
+
+    #research-programs-div .subsubsection {
+        margin-top: 1.75rem;
+        padding-top: 1.25rem;
+    }
+
+    #research-programs-div .subsubsection h4,
+    #research-programs-div .subsubsection-title {
+        font-size: 1.125rem;
+    }
+
+    #research-programs-div .content-small,
+    #research-programs-div .subsubsection ol li {
+        font-size: 0.9375rem;
+    }
+}
