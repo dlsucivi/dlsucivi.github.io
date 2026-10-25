@@ -1,46 +1,65 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-    const filter = document.querySelector("#news-type-filter");
-    if (!filter) return;
+    const filterConfigs = [
+        {
+            filterId: "news-type-filter",
+            maxVisible: 3
+        },
+        {
+            filterId: "activites-type-filter",
+            maxVisible: 3
+        }
+    ];
 
-    const buttons = filter.querySelectorAll(".news-filter-btn");
-    const section = filter.closest(".news");
-    const cards = section
-        ? Array.from(section.querySelectorAll(".news-card"))
-        : [];
+    filterConfigs.forEach(function (config) {
+        const filter = document.getElementById(config.filterId);
+        if (!filter) return;
 
-    const maxVisible = 3;
+        const section = filter.closest("section.news");
+        if (!section) return;
 
-    function filterNews(selectedType) {
-        let visibleCount = 0;
+        const buttons = filter.querySelectorAll(".news-filter-btn");
+        const cards = Array.from(
+            section.querySelectorAll(".news-card")
+        );
 
-        cards.forEach(function (card) {
-            const matchesType =
-                selectedType === "" ||
-                card.dataset.newsType === selectedType;
+        function applyFilter(selectedType) {
+            let visibleCount = 0;
 
-            const shouldShow =
-                matchesType && visibleCount < maxVisible;
+            cards.forEach(function (card) {
+                const matchesType =
+                    selectedType === "" ||
+                    card.dataset.newsType === selectedType;
 
-            card.hidden = !shouldShow;
+                const shouldShow =
+                    matchesType &&
+                    visibleCount < config.maxVisible;
 
-            if (shouldShow) visibleCount++;
-        });
+                card.hidden = !shouldShow;
+
+                if (shouldShow) {
+                    visibleCount++;
+                }
+            });
+
+            buttons.forEach(function (button) {
+                const isActive =
+                    button.dataset.type === selectedType;
+
+                button.classList.toggle("active", isActive);
+                button.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
+            });
+        }
 
         buttons.forEach(function (button) {
-            const isActive = button.dataset.type === selectedType;
-
-            button.classList.toggle("active", isActive);
-            button.setAttribute("aria-pressed", String(isActive));
+            button.addEventListener("click", function () {
+                applyFilter(button.dataset.type || "");
+            });
         });
-    }
 
-    buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            filterNews(button.dataset.type);
-        });
+        applyFilter("");
     });
-
-    filterNews("");
-
-
 });

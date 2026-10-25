@@ -87,7 +87,7 @@
     font-weight: 700;
 }
 
-.news {
+.news, .activities {
     padding-top: 8px;
     margin-top: 40px;
 }
@@ -128,7 +128,7 @@
     gap: 22px;
 }
 
-.news-card {
+.news-card, .activities-card {
     display: flex;
     min-width: 0;
     flex-direction: column;
@@ -139,7 +139,7 @@
     transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
-.news-card:hover {
+.news-card:hover, .activities-card:hover {
     transform: translateY(-3px);
     border-color: #c4d5e2;
     box-shadow: 0 10px 26px rgba(16, 43, 89, 0.08);

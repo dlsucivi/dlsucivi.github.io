@@ -108,7 +108,7 @@ css: public/css/news.css
         {% endif %}
     </section>
 
-    <section class="news" aria-labelledby="activites-title">
+    <section class="activities" aria-labelledby="activites-title">
         <div class="section-heading">
             <div>
                 <p class="eyebrow">From our students</p>
@@ -117,7 +117,7 @@ css: public/css/news.css
             </div>
         </div>
 
-        <div class="news-filter" id="activites-type-filter">
+        <div class="news-filter" id="activities-type-filter">
             <button class="news-filter-btn active" data-type="" aria-pressed="true">
                 All
             </button>
@@ -130,65 +130,61 @@ css: public/css/news.css
         </div>
 
         <div class="news-grid">
-            {% for news in site.data.activities %}
-                <article class="news-card" data-news-type="{{ news.type | default: 'CIVI News' | escape }}">
+            {% for activity in site.data.activities %}
+                <article class="activities-card" data-news-type="{{ activity.type | default: 'CIVI Activity' | escape }}">
                     <div class="news-card-image">
-                        {% if news.image %}
-                        <img src="/public/images/activities/{{news.image}}" alt="CIVI news and research" loading="lazy">
+                        {% if activity.image %}
+                        <img src="/public/images/activities/{{activity.image}}" alt="CIVI activity" loading="lazy">
                         {% else %}
-                        <img src="/public/images/civi2026.png" alt="CIVI news and research" loading="lazy">
+                        <img src="/public/images/civi2026.png" alt="CIVI activity" loading="lazy">
                         {% endif %}
                     </div>
                     <div class="news-card-content">
-                        {% assign news_category = news.type | default: "CIVI News" %}
+                        {% assign activity_category = activity.type | default: "CIVI Activity" %}
                         <span class="news-category
-                        {% if news.type == 'Academic Lecture' %}
+                        {% if activity.type == 'Academic Lecture' %}
                             category-lecture
-                        {% elsif news.type == 'Tech Workshop' %}
+                        {% elsif activity.type == 'Tech Workshop' %}
                             category-workshop
                         {% else %}
                             category-general
                         {% endif %}">
-                        {{ news_category }}
+                        {{ activity_category }}
                         </span>
 
-                        {% if news.date %}
-                            <p class="news-date">{{ news.date }}</p>
+                        {% if activity.date %}
+                            <p class="news-date">{{ activity.date }}</p>
                         {% endif %}
 
                         <h3>
-                            {% if news.title %}
-                                {{ news.title | escape }}
+                            {% if activity.title %}
+                                {{ activity.title | escape }}
                             {% else %}
-                                CIVI News Update
+                                CIVI Activity
                             {% endif %}
                         </h3>
 
                         <p class="news-summary">
-                            {% if news.summary %}
-                                {{ news.summary }}
+                            {% if activity.summary %}
+                                {{ activity.summary }}
                             {% else %}
-                                {% if news.type == "Academic Lecture" %}
-                                    Our {{ news.presenter_type }} {{ news.presenter }} presented an academic lecture titled "{{ news.title | escape }}."
-                                {% elsif news.type == "Tech Workshop" %}
-                                    Our {{ news.presenter_type }} {{ news.presenter }} led a technical workshop titled "{{ news.title | escape }}."
+                                {% if activity.type == "Academic Lecture" %}
+                                    Our {{ activity.presenter_type }} {{ activity.presenter }} presented an academic lecture titled "{{ activity.title | escape }}."
+                                {% elsif activity.type == "Tech Workshop" %}
+                                    Our {{ activity.presenter_type }} {{ activity.presenter }} led a technical workshop titled "{{ activity.title | escape }}."
                                 {% else %}
                                     Read the latest update from the CIVI research community.
                                 {% endif %}
                             {% endif %}
                         </p>
 
-                        {% if news.link %}
-                            <a class="card-link" href="{{ news.link }}">Watch here <span aria-hidden="true">→</span></a>
+                        {% if activity.link %}
+                            <a class="card-link" href="{{ activity.link }}">📹 Watch here <span aria-hidden="true">→</span></a>
                         {% endif %}
                     </div>
                 </article>
             {% endfor %}
         </div>
-
-        {% if site.data.news.size == 0 %}
-            <p class="news-empty">News and announcements will appear here soon.</p>
-        {% endif %}
     </section>
 </main>
 
