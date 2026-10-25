@@ -1,39 +1,36 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const filterConfigs = [
-        {
-            filterId: "news-type-filter",
-            maxVisible: 3
-        },
-        {
-            filterId: "activites-type-filter",
-            maxVisible: 3
-        }
-    ];
-
-    filterConfigs.forEach(function (config) {
+    function attachFilter(config) {
         const filter = document.getElementById(config.filterId);
-        if (!filter) return;
+        const section = document.querySelector(config.sectionSelector);
 
-        const section = filter.closest("section.news");
-        if (!section) return;
+        if (!filter || !section) {
+            return;
+        }
 
-        const buttons = filter.querySelectorAll(".news-filter-btn");
+        const buttons = Array.from(
+            filter.querySelectorAll(".news-filter-btn")
+        );
+
         const cards = Array.from(
-            section.querySelectorAll(".news-card")
+            section.querySelectorAll(config.cardSelector)
         );
 
         function applyFilter(selectedType) {
             let visibleCount = 0;
 
             cards.forEach(function (card) {
-                const matchesType =
-                    selectedType === "" ||
-                    card.dataset.newsType === selectedType;
+                const cardType = (
+                    card.getAttribute("data-news-type") || ""
+                ).trim();
 
-                const shouldShow =
-                    matchesType &&
+                const matchesCategory =
+                    selectedType === "" || cardType === selectedType;
+
+                const withinLimit =
                     visibleCount < config.maxVisible;
+
+                const shouldShow = matchesCategory && withinLimit;
 
                 card.hidden = !shouldShow;
 
@@ -43,8 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             buttons.forEach(function (button) {
-                const isActive =
-                    button.dataset.type === selectedType;
+                const buttonType = (
+                    button.getAttribute("data-type") || ""
+                ).trim();
+
+                const isActive = buttonType === selectedType;
 
                 button.classList.toggle("active", isActive);
                 button.setAttribute(
@@ -56,10 +56,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         buttons.forEach(function (button) {
             button.addEventListener("click", function () {
-                applyFilter(button.dataset.type || "");
+                const selectedType = (
+                    button.getAttribute("data-type") || ""
+                ).trim();
+
+                applyFilter(selectedType);
             });
         });
 
+        // Apply the default "All" filter on page load.
         applyFilter("");
+    }
+
+    // News: show a maximum of three matching cards.
+    attachFilter({
+        filterId: "news-type-filter",
+        sectionSelector: "section.news",
+        cardSelector: ".news-card",
+        maxVisible: 3
+    });
+
+    // Activities: show all matching cards.
+    attachFilter({
+        filterId: "activities-type-filter",
+        sectionSelector: "section.activities",
+        cardSelector: ".activities-card",
+        maxVisible: 3
     });
 });

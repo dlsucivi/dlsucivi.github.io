@@ -331,7 +331,8 @@
     outline-offset: 3px;
 }
 
-.news-card[hidden] {
+.news-card[hidden],
+.activities-card[hidden] {
     display: none !important;
 }
 
