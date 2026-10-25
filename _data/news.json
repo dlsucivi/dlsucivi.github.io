@@ -1,27 +1,30 @@
 [
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 July 5",
         "title": "Exploring Multimodal Object Detection",
         "presenter_type": "BSMSCS student",
         "presenter": "Matthew Ryan Carandang",
-        "link": "#"
+        "image": "20250705_carandang.png",
+        "link": "https://www.youtube.com/watch?v=L0JFqnmLaP8"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 June 28",
         "title": "Small Object Detection: Tiny Targets, Big Problems",
         "presenter_type": "BSMSCS student",
         "presenter": "Rafael Subo Yap",
-        "link": "#"
+        "image": "20250628_yap.png",
+        "link": "https://www.youtube.com/watch?v=QgUEf9pBjYA"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 June 28",
         "title": "Transfer Learning for Medical Image Classification",
         "presenter_type": "BSMSCS student",
         "presenter": "Christian Tia",
-        "link": "#"
+        "image": "20250628_tia.png",
+        "link": "https://www.youtube.com/watch?v=mtfmtn9Dy9w"
     },
     {
         "type": "Tech Workshop",
@@ -29,31 +32,35 @@
         "title": "Development and Evaluation of Object Segmentation Networks",
         "presenter_type": "BSMSCS student",
         "presenter": "Aaron Gabrielle Dichoso",
-        "link": "#"
+        "image": "20250604_dichoso.png",
+        "link": "https://www.youtube.com/watch?v=8U46_51i5ZY"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 May 28",
         "title": "Introduction and Evolution of Object Segmentation",
         "presenter_type": "BSMSCS student",
         "presenter": "Aaron Gabrielle Dichoso",
-        "link": "#"
+        "image": "20250528_dichoso.png",
+        "link": "https://www.youtube.com/watch?v=GY6s2aD03wM"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 March 12",
         "title": "An Introduction to Residual Learning for Computer Vision",
         "presenter_type": "BSMSCS student",
         "presenter": "Aaron Gabrielle Dichoso",
-        "link": "#"
+        "image": "20250312_dichoso.png",
+        "link": "https://www.youtube.com/watch?v=gfCZCn4qtxk"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 March 5",
         "title": "Super-Resolution: Spotting the Unseen, Seeing the Unthinkable",
         "presenter_type": "BSMSCS student",
         "presenter": "Ricardo Luis Vicerra",
-        "link": "#"
+        "image": "20250305_vicerra.png",
+        "link": "https://www.youtube.com/watch?v=yDRNYCqgm_k"
     },
     {
         "type": "Tech Workshop",
@@ -61,15 +68,17 @@
         "title": "Building YOLO from Scratch using PyTorch",
         "presenter_type": "BSMSCS student",
         "presenter": "Juan Carlo Azarcon",
-        "link": "#"
+        "image": "20250219_azarcon.png",
+        "link": "https://www.youtube.com/watch?v=bUnNMSmSmUM"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 Feb 12",
         "title": "Exploring the Evolution of YOLO Models",
         "presenter_type": "BSMSCS student",
         "presenter": "Juan Carlo Azarcon",
-        "link": "#"
+        "image": "20250212_azarcon.png",
+        "link": "https://www.youtube.com/watch?v=4tXTUKLjtWY"
     },
     {
         "type": "Tech Workshop",
@@ -77,15 +86,17 @@
         "title": "Implementing Decoupling for FGVC Tasks with Noisy Labels",
         "presenter_type": "BSMSCS student",
         "presenter": "Kate Justine Ermitano",
-        "link": "#"
+        "image": "20250208_ermitano.png",
+        "link": "https://www.youtube.com/watch?v=40RHkbon9as"
     },
     {
-        "type": "Acad Lecture",
+        "type": "Academic Lecture",
         "date": "2025 Feb 1",
         "title": "Decoupling for Robust Fine-Grained Visual Classification with Noisy Labels",
         "presenter_type": "BSMSCS student",
         "presenter": "Kate Justine Ermitano",
-        "link": "#"
+        "image": "20250201_ermitano.png",
+        "link": "https://www.youtube.com/watch?v=Z-TLg0hl_-8"
     },
     {
         "type": "Faculty Engagement",
@@ -95,7 +106,7 @@
         "event_venue": "Philippine International Convention Center (PICC)",
         "presenter_type": "faculty member",
         "presenter": "Dr. John Jethro Virtusio",
-        "link": "#"
+        "image": "20241028_virtusio.jpg"
     },
     {
         "type": "Tech Workshop",
@@ -103,7 +114,8 @@
         "title": "Introduction to Object Detection with YOLOv8",
         "presenter_type": "BSMSCS student",
         "presenter": "Juan Carlo Azarcon",
-        "link": "#"
+        "image": "20241030_azarcon.png",
+        "link": "https://www.youtube.com/watch?v=ALueGMTHO6s"
     },
     {
         "type": "Conference Organizer",
@@ -114,7 +126,7 @@
         "event_position": "session chair",
         "presenter_type": "lab head",
         "presenter": "Arren Matthew Antioquia",
-        "link": "#"
+        "image": "20241018_antioquia.jpg"
     },
     {
         "type": "Conference Presentation",
@@ -124,7 +136,7 @@
         "event_venue": "Hong Kong",
         "presenter_type": "lab head",
         "presenter": "Arren Matthew Antioquia",
-        "link": "#"
+        "image": "20241018_antioquia.jpg"
     },
     {
         "type": "Tech Workshop",
@@ -132,6 +144,7 @@
         "title": "Building an Image Classifier using PyTorch",
         "presenter_type": "BSMSCS student",
         "presenter": "Joseph Thomas Año",
-        "link": "#"
+        "image": "20241009_ano.png",
+        "link": "https://www.youtube.com/watch?v=UoEWwKaX2oU"
     },
 ]
