@@ -1,133 +1,155 @@
 
-#about-div {
+/* About page */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 10px 0;
+}
+
+/* Intro heading, styled like News & Highlights */
+.about-intro {
+    max-width: 900px;
+    padding: 24px 0 0;
+}
+
+.about-intro .eyebrow {
+    margin-bottom: 14px;
+    color: var(--civi-green);
+    font-family: 'Lato', sans-serif;
+    font-size: var(--font-sm);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-intro h1 {
+    max-width: 900px;
+    color: #111111;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 1.15;
+}
+
+.about-intro .section-subtitle {
+    max-width: 900px;
+    margin-top: 18px;
+    color: #555555;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: var(--font-lg);
+    line-height: 1.7;
+    letter-spacing: 0.1px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #000000;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    font-family: 'Lato', sans-serif;
+}
+
+.section-subtitle {
+    margin: 8px 0 0;
+    color: var(--civi-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Introductory paragraph */
+.about-page #main-content {
     width: 100%;
-    max-width: none;
+}
+
+.about-page #about-div {
+    width: 100%;
     margin: 0;
 }
 
-#about-div .content-small {
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1rem;
+.about-page #about-div .content-small {
+    max-width: 900px;
+    margin-top: 0;
+    font-size: var(--font-base);
     line-height: 1.8;
-    letter-spacing: 0.01em;
-    margin-top: 20px;
 }
 
-#research-programs-div {
-    margin-top: 3.5rem;
+/* Research areas */
+.about-page #research-programs-div {
+    margin-top: 40px;
 }
 
-#research-programs-div > .subsection-title {
+.about-page .subsection-title {
     padding-top: 0;
-    font-size: 1.375rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: var(--font-2xl);
+    letter-spacing: 0.8px;
+}
+
+.about-page .subsubsection {
+    margin-top: 0;
+    padding: 28px 0;
+}
+
+.about-page .subsubsection h4,
+.about-page .subsubsection-title {
+    font-size: var(--font-xl);
     line-height: 1.4;
 }
 
-#research-programs-div .subsubsection {
-    margin-top: 1.5rem;
-    padding-top: 1.75rem;
-}
-
-#research-programs-div .subsubsection h4,
-#research-programs-div .subsubsection-title {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    letter-spacing: 0.01em;
-    color: #000000;
-}
-
-#research-programs-div .content-small {
+.about-page .subsubsection .content-small {
     max-width: 900px;
-    font-size: 1rem;
+    margin-top: 14px;
+    font-size: var(--font-base);
     line-height: 1.8;
-    letter-spacing: 0.01em;
-    margin-top: 1rem;
 }
 
-#research-programs-div .subsubsection ol {
-    margin-top: 1rem;
-    padding-left: 1.5rem;
+.about-page .subsubsection ol {
+    margin-top: 16px;
+    padding-left: 24px;
     list-style-position: outside;
 }
 
-#research-programs-div .subsubsection ol li {
-    padding-left: 0.35rem;
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
+.about-page .subsubsection ol li {
+    padding-left: 6px;
+    margin-bottom: 10px;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: var(--font-base);
+    letter-spacing: 0.1px;
     line-height: 1.75;
-    letter-spacing: 0.01em;
 }
 
-#research-programs-div .subsubsection ol li:last-child {
-    margin-bottom: 0;
-}
-
+/* Responsive */
 @media (max-width: 1000px) {
-    #about-div {
+    .about-page {
+        gap: 36px;
+    }
+
+    .about-intro {
         max-width: 100%;
-    }
-
-    #about-div .content-small {
-        font-size: 1.0625rem;
-        line-height: 1.75;
-    }
-
-    #research-programs-div {
-        margin-top: 2.75rem;
-    }
-
-    #research-programs-div > .subsection-title {
-        font-size: 1.25rem;
-    }
-
-    #research-programs-div .subsubsection {
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-    }
-
-    #research-programs-div .subsubsection h4,
-    #research-programs-div .subsubsection-title {
-        font-size: 1.1875rem;
-    }
-
-    #research-programs-div .content-small {
-        font-size: 1rem;
-        line-height: 1.75;
-    }
-
-    #research-programs-div .subsubsection ol {
-        padding-left: 1.25rem;
-    }
-
-    #research-programs-div .subsubsection ol li {
-        padding-left: 0.25rem;
-        margin-bottom: 0.65rem;
-        line-height: 1.7;
+        padding-top: 10px;
     }
 }
 
 @media (max-width: 580px) {
-    #research-programs-div {
-        margin-top: 2.25rem;
+    .about-page {
+        gap: 30px;
     }
 
-    #research-programs-div > .subsection-title {
-        font-size: 1.1875rem;
+    .about-intro h1 {
+        font-size: 2rem;
     }
 
-    #research-programs-div .subsubsection {
-        margin-top: 1.75rem;
-        padding-top: 1.25rem;
+    .about-intro .section-subtitle {
+        font-size: var(--font-base);
+        line-height: 1.7;
     }
 
-    #research-programs-div .subsubsection h4,
-    #research-programs-div .subsubsection-title {
-        font-size: 1.125rem;
-    }
-
-    #research-programs-div .content-small,
-    #research-programs-div .subsubsection ol li {
-        font-size: 0.9375rem;
+    .about-page .subsubsection {
+        padding: 22px 0;
     }
 }

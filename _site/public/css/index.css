@@ -13,6 +13,13 @@
     --font-title: 1.625rem;
     --font-display: 1.875rem;
     --font-icon: 2rem;
+
+    --civi-navy: #102b59;
+    --civi-green: #007b58;
+    --civi-text: #263b59;
+    --civi-muted: #667894;
+    --civi-border: #dfe7ef;
+    --civi-soft: #f3f7fa;
 }
 
 html, body, div, span, applet, object, iframe,

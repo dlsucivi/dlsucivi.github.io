@@ -1,121 +1,13 @@
 [
     {
-        "type": "Academic Lecture",
-        "date": "2025 July 5",
-        "title": "Exploring Multimodal Object Detection",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Matthew Ryan Carandang",
-        "image": "20250705_carandang.png",
-        "link": "https://www.youtube.com/watch?v=L0JFqnmLaP8"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 June 28",
-        "title": "Small Object Detection: Tiny Targets, Big Problems",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Rafael Subo Yap",
-        "image": "20250628_yap.png",
-        "link": "https://www.youtube.com/watch?v=QgUEf9pBjYA"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 June 28",
-        "title": "Transfer Learning for Medical Image Classification",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Christian Tia",
-        "image": "20250628_tia.png",
-        "link": "https://www.youtube.com/watch?v=mtfmtn9Dy9w"
-    },
-    {
-        "type": "Tech Workshop",
-        "date": "2025 June 4",
-        "title": "Development and Evaluation of Object Segmentation Networks",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Aaron Gabrielle Dichoso",
-        "image": "20250604_dichoso.png",
-        "link": "https://www.youtube.com/watch?v=8U46_51i5ZY"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 May 28",
-        "title": "Introduction and Evolution of Object Segmentation",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Aaron Gabrielle Dichoso",
-        "image": "20250528_dichoso.png",
-        "link": "https://www.youtube.com/watch?v=GY6s2aD03wM"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 March 12",
-        "title": "An Introduction to Residual Learning for Computer Vision",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Aaron Gabrielle Dichoso",
-        "image": "20250312_dichoso.png",
-        "link": "https://www.youtube.com/watch?v=gfCZCn4qtxk"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 March 5",
-        "title": "Super-Resolution: Spotting the Unseen, Seeing the Unthinkable",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Ricardo Luis Vicerra",
-        "image": "20250305_vicerra.png",
-        "link": "https://www.youtube.com/watch?v=yDRNYCqgm_k"
-    },
-    {
-        "type": "Tech Workshop",
-        "date": "2025 Feb 19",
-        "title": "Building YOLO from Scratch using PyTorch",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Juan Carlo Azarcon",
-        "image": "20250219_azarcon.png",
-        "link": "https://www.youtube.com/watch?v=bUnNMSmSmUM"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 Feb 12",
-        "title": "Exploring the Evolution of YOLO Models",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Juan Carlo Azarcon",
-        "image": "20250212_azarcon.png",
-        "link": "https://www.youtube.com/watch?v=4tXTUKLjtWY"
-    },
-    {
-        "type": "Tech Workshop",
-        "date": "2025 Feb 8",
-        "title": "Implementing Decoupling for FGVC Tasks with Noisy Labels",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Kate Justine Ermitano",
-        "image": "20250208_ermitano.png",
-        "link": "https://www.youtube.com/watch?v=40RHkbon9as"
-    },
-    {
-        "type": "Academic Lecture",
-        "date": "2025 Feb 1",
-        "title": "Decoupling for Robust Fine-Grained Visual Classification with Noisy Labels",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Kate Justine Ermitano",
-        "image": "20250201_ermitano.png",
-        "link": "https://www.youtube.com/watch?v=Z-TLg0hl_-8"
-    },
-    {
         "type": "Faculty Engagement",
         "date": "2024 Oct 28",
         "title": "Computer Vision in Agriculture",
-        "event_name": "10th DOST-Balik Scientist Program (BSP) Annual Convention ",
+        "event_name": "10th DOST-Balik Scientist Program (BSP) Annual Convention",
         "event_venue": "Philippine International Convention Center (PICC)",
         "presenter_type": "faculty member",
         "presenter": "Dr. John Jethro Virtusio",
         "image": "20241028_virtusio.jpg"
-    },
-    {
-        "type": "Tech Workshop",
-        "date": "2024 Oct 30",
-        "title": "Introduction to Object Detection with YOLOv8",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Juan Carlo Azarcon",
-        "image": "20241030_azarcon.png",
-        "link": "https://www.youtube.com/watch?v=ALueGMTHO6s"
     },
     {
         "type": "Conference Organizer",
@@ -137,14 +29,5 @@
         "presenter_type": "lab head",
         "presenter": "Arren Matthew Antioquia",
         "image": "20241018_antioquia.jpg"
-    },
-    {
-        "type": "Tech Workshop",
-        "date": "2024 Oct 9",
-        "title": "Building an Image Classifier using PyTorch",
-        "presenter_type": "BSMSCS student",
-        "presenter": "Joseph Thomas Año",
-        "image": "20241009_ano.png",
-        "link": "https://www.youtube.com/watch?v=UoEWwKaX2oU"
-    },
+    }
 ]
