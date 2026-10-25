@@ -74,6 +74,7 @@ body {
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
     margin-right: 20px;
+    align-self: flex-start;
 }
 
 .link {
