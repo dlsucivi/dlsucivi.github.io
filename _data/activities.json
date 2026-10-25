@@ -1,6 +1,24 @@
 [
     {
         "type": "Tech Workshop",
+        "date": "2026 October 17",
+        "title": "Training a YOLO Model on Imbalanced Data",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Marxandrea Diane Cabato",
+        "image": "20261017_cabato.png",
+        "link": "https://www.youtube.com/watch?v=ASifiXTKb3E"
+    },
+    {
+        "type": "Academic Lecture",
+        "date": "2026 October 10",
+        "title": "Long-Tail Object Detection - Addressing Class Imbalance in Vision Models",
+        "presenter_type": "BSMSCS student",
+        "presenter": "Marxandrea Diane Cabato",
+        "image": "20261010_cabato.png",
+        "link": "https://www.youtube.com/watch?v=ir7DHEppyVs"
+    },
+    {
+        "type": "Tech Workshop",
         "date": "2025 November 19",
         "title": "Implementing Curriculum Learning in PyTorch",
         "presenter_type": "BSMSCS student",

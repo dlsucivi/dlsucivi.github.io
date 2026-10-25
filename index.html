@@ -42,6 +42,12 @@ css: public/css/news.css
             <button class="news-filter-btn category-faculty" data-type="Faculty Engagement" aria-pressed="false">
                 Faculty Engagement
             </button>
+            <button class="news-filter-btn category-activity" data-type="Student Activity" aria-pressed="false">
+                Student Activity
+            </button>
+            <button class="news-filter-btn category-awards" data-type="Awards" aria-pressed="false">
+                Awards
+            </button>
         </div>
 
         <div class="news-grid">
@@ -61,6 +67,10 @@ css: public/css/news.css
                             category-conference
                         {% elsif news.type == 'Faculty Engagement' %}
                             category-faculty
+                        {% elsif news.type == 'Student Activity' %}
+                            category-activity
+                        {% elsif news.type == 'Awards' %}
+                            category-awards
                         {% else %}
                             category-general
                         {% endif %}">
@@ -84,7 +94,7 @@ css: public/css/news.css
                                 {{ news.summary }}
                             {% else %}
                                 {% if news.type == "Conference Presentation" %}
-                                    Our {{ news.presenter_type }} {{ news.presenter }} presented research on {{ news.title | escape }} at {{ news.event_name }}{% if news.event_venue %}, held in {{ news.event_venue }}{% endif %}.
+                                    Our {{ news.presenter_type }} {{ news.presenter }} presented research entitled "{{ news.title | escape }}" at the {{ news.event_name }}{% if news.event_venue %}, held in {{ news.event_venue }}{% endif %}.
                                 {% elsif news.type == "Conference Organizer" %}
                                     Our {{ news.presenter_type }} {{ news.presenter }} served as {{ news.event_position }} for {{ news.title | escape }} at {{ news.event_name }}{% if news.event_venue %}, held in {{ news.event_venue }}{% endif %}.
                                 {% elsif news.type == "Faculty Engagement" %}
@@ -132,6 +142,7 @@ css: public/css/news.css
         <div class="news-grid">
             {% for activity in site.data.activities %}
                 <article class="activities-card" data-news-type="{{ activity.type | default: 'CIVI Activity' | escape }}">
+                    <a href="{{ activity.link }}">
                     <div class="news-card-image">
                         {% if activity.image %}
                         <img src="/public/images/activities/{{activity.image}}" alt="CIVI activity" loading="lazy">
@@ -139,6 +150,7 @@ css: public/css/news.css
                         <img src="/public/images/civi2026.png" alt="CIVI activity" loading="lazy">
                         {% endif %}
                     </div>
+                    </a>
                     <div class="news-card-content">
                         {% assign activity_category = activity.type | default: "CIVI Activity" %}
                         <span class="news-category

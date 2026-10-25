@@ -182,12 +182,12 @@
     text-transform: uppercase;
 }
 
-.category-lecture {
+.category-lecture, .category-awards {
     background: #e0f5ee;
     color: #006d50;
 }
 
-.category-workshop {
+.category-workshop, .category-activity {
     background: #fbe9e9;
     color: #9b3037;
 }
@@ -214,7 +214,7 @@
     line-height: 1.4;
 }
 
-.news-card h3 {
+.news-card h3, .activities-card h3 {
     margin: 0 0 11px;
     color: var(--civi-navy);
     font-size: 1.12rem;
