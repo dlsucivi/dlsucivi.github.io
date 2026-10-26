@@ -65,7 +65,7 @@
 .activities-page .page-title {
     margin: 0 0 18px;
     padding-top: 0;
-    color: var(--civi-navy);
+    /*color: var(--civi-navy);*/
     font-family: var(--font-heading);
     font-size: var(--font-page-title);
     font-weight: 700;
