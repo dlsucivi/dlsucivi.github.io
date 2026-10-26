@@ -1,0 +1,197 @@
+---
+layout: default
+title: Activity Details | DLSU-CIVI
+permalink: /activities/
+additional_css: true
+css: /public/css/activities_details.css
+---
+
+<main id="content" class="activities-page">
+    <div class="activities-layout">
+
+        <!-- Main activity content -->
+        <article class="activities-main" id="activities-main">
+            <header class="activities-header">
+                <p class="activities-eyebrow" id="activity-type"></p>
+
+                <h1 class="page-title" id="activity-title"></h1>
+
+                <p class="activities-presenter">
+                    <i class="lni lni-user" aria-hidden="true"></i>
+                    <span>
+                        <span id="presenter-type"></span>:
+                        <span id="presenter-name"></span>
+                    </span>
+                </p>
+
+                <p class="activities-date" id="activity-date"></p>
+            </header>
+
+            <!-- YouTube video is inserted by activities_details.js -->
+            <div class="activities-video" id="activity-video"></div>
+
+            <div class="activities-sections">
+
+                <section
+                    class="activities-section"
+                    id="activity-abstract-section"
+                >
+                    <h2 class="activities-section-title subsubsection-title">
+                        Abstract
+                    </h2>
+                    <p id="activity-abstract"></p>
+                </section>
+
+                <section
+                    class="activities-section"
+                    id="activity-outline-section"
+                >
+                    <h2 class="activities-section-title subsubsection-title">
+                        Outline
+                    </h2>
+                    <ul id="activity-outline"></ul>
+                </section>
+
+                <section
+                    class="activities-section"
+                    id="activity-prerequisites-section"
+                >
+                    <h2 class="activities-section-title subsubsection-title">
+                        Prerequisite Knowledge
+                    </h2>
+                    <ul id="activity-prerequisites"></ul>
+                </section>
+
+                <section
+                    class="activities-section"
+                    id="activity-dependencies-section"
+                >
+                    <h2 class="activities-section-title subsubsection-title">
+                        Dependencies
+                    </h2>
+                    <ul id="activity-dependencies"></ul>
+                </section>
+
+                <section
+                    class="activities-section"
+                    id="activity-installation-section"
+                >
+                    <h2 class="activities-section-title subsubsection-title">
+                        Installation Resources
+                    </h2>
+                    <ul id="activity-installation"></ul>
+                </section>
+
+                <section
+                    class="activities-section"
+                    id="activity-presenter-bio-section"
+                >
+                    <h2 class="activities-section-title subsubsection-title">
+                        About the Presenter
+                    </h2>
+                    <p id="activity-presenter-bio"></p>
+                </section>
+
+            </div>
+        </article>
+
+        <!-- Displayed if the requested activity cannot be found -->
+        <p class="activities-error" id="activities-error" hidden>
+            The requested activity could not be found. Please check the link
+            or return to the CIVI website.
+        </p>
+
+        <!-- Activity data from _data/activities.json -->
+        <script id="activities-data" type="application/json">
+            {{ site.data.activities | jsonify }}
+        </script>
+
+        <!-- Recent activities sidebar -->
+        <aside
+            class="activities-sidebar"
+            aria-labelledby="recent-activities-title"
+        >
+            <h2
+                class="activities-sidebar-title subsubsection-title"
+                id="recent-activities-title"
+            >
+                Recent Lectures & Workshops
+            </h2>
+
+            <div
+                class="activities-sidebar-list"
+                id="recent-activities"
+            >
+                {% assign sorted_activities = site.data.activities | sort: "date" | reverse %}
+
+                {% for activity in sorted_activities limit: 5 %}
+                    <article class="recent-activities-card">
+
+                        <a
+                            class="recent-activities-card-link"
+                            href="{{ '/activities/' | relative_url }}?id={{ activity.slug | uri_escape }}"
+                        >
+                            <div class="recent-activities-thumbnail">
+                                {% if activity.image %}
+                                    <img
+                                        src="{{ '/public/images/activities/' | append: activity.image | relative_url }}"
+                                        alt="{{ activity.title | escape }}"
+                                        loading="lazy"
+                                    >
+                                {% else %}
+                                    <img
+                                        src="{{ '/public/images/civi2026.png' | relative_url }}"
+                                        alt="DLSU-CIVI activity"
+                                        loading="lazy"
+                                    >
+                                {% endif %}
+                            </div>
+
+                            <div class="recent-activities-card-content">
+
+                                {% assign activity_type_lower = activity.type | downcase %}
+
+                                {% if activity_type_lower contains "workshop" %}
+                                    <span class="activities-card-type category-workshop">
+                                        {{ activity.type | escape }}
+                                    </span>
+                                {% elsif activity_type_lower contains "lecture" %}
+                                    <span class="activities-card-type category-lecture">
+                                        {{ activity.type | escape }}
+                                    </span>
+                                {% else %}
+                                    <span class="activities-card-type category-general">
+                                        {{ activity.type | default: "CIVI Activity" | escape }}
+                                    </span>
+                                {% endif %}
+
+                                <h3>
+                                    {{ activity.title | escape }}
+                                </h3>
+
+                                <p class="recent-activities-date">
+                                    {{ activity.date | escape }}
+                                </p>
+
+                                {% if activity.presenter %}
+                                    <p class="recent-activities-presenter">
+                                        <strong>Presenter:</strong>
+                                        {{ activity.presenter | escape }}
+                                    </p>
+                                {% endif %}
+
+                            </div>
+                        </a>
+
+                    </article>
+                {% endfor %}
+            </div>
+        </aside>
+
+    </div>
+</main>
+
+<script
+    src="{{ '/public/js/activities_details.js' | relative_url }}"
+    defer
+></script>
