@@ -4,19 +4,30 @@ title: Center for Computational Imaging & Visual Innovations | People
 additional_css: true
 css: public/css/people.css
 ---
-<h2 id="main-title">PEOPLE</h2>
 
-<div id="main-content">
+<main class="people-page">
+    <header class="people-intro">
+        <h1 class="page-title">Our People</h1>
+        <p class="people-description">
+            Meet the faculty researchers, students, and graduates contributing to research at CIVI.
+        </p>
+    </header>
 
     <!-- Faculty Members -->
-    <section id="people-faculty-list-div" class="people-list-div faculty-section">
-        <h3 class="subsection-title">Faculty Members</h3>
+    <section id="people-faculty-list-div"
+             class="people-section faculty-section"
+             aria-labelledby="faculty-title">
 
-        <div class="people-list-div-container faculty-grid">
+        <h2 id="faculty-title" class="section-title">
+            Faculty Researchers
+        </h2>
+
+        <div class="people-grid faculty-grid">
             {% for person in site.data.faculty %}
             <article class="person-card faculty-card">
-
-                <a href="{{ person.link }}" class="person-image-link">
+                <a href="{{ person.link }}"
+                   class="person-image-link"
+                   aria-label="View {{ person.name }}">
                     <img
                         class="person-img"
                         src="/public/images/faculty/{{ person.image }}"
@@ -25,35 +36,45 @@ css: public/css/people.css
                 </a>
 
                 <div class="person-details">
-                    <a href="{{ person.link }}" class="person-name link">
+                    <a href="{{ person.link }}"
+                       class="person-name link">
                         {{ person.name }}
                     </a>
 
                     <p class="person-degree">{{ person.degree }}</p>
-                    <p class="person-specialization">{{ person.specialization }}</p>
+
+                    <p class="person-specialization">
+                        {{ person.specialization }}
+                    </p>
 
                     {% if person.email and person.email != "" %}
-                    <a href="mailto:{{ person.email }}" class="person-email link">
-                        {{ person.email }}
+                    <a href="mailto:{{ person.email }}" class="person-email">
+                        <i class="lni lni-envelope" aria-hidden="true"></i>
+                        <span>Email</span>
                     </a>
                     {% endif %}
                 </div>
-
             </article>
             {% endfor %}
         </div>
     </section>
 
     <!-- BSMSCS Students -->
-    <section id="people-bsmscs-list-div" class="people-list-div student-section">
-        <h3 class="subsection-title">BSMSCS Students</h3>
+    <section id="people-bsmscs-list-div"
+             class="people-section student-section"
+             aria-labelledby="bsmscs-title">
 
-        <div class="people-list-div-container student-grid">
+        <h2 id="bsmscs-title" class="section-title">
+            BSMSCS Students
+        </h2>
+
+        <div class="people-grid student-grid">
             {% for person in site.data.bsmscs %}
             <article class="person-card student-card">
-
                 <div class="student-image-wrap">
-                    <a href="{{ person.link }}" class="person-image-link">
+                    <a href="{{ person.link }}"
+                       class="person-image-link"
+                       aria-label="View {{ person.name }}">
                         <img
                             class="person-img"
                             src="/public/images/students/{{ person.image }}"
@@ -62,35 +83,42 @@ css: public/css/people.css
                     </a>
                 </div>
 
-                <div class="student-details">
-                    <a href="{{ person.link }}" class="person-name link">
+                <div class="person-details student-details">
+                    <a href="{{ person.link }}"
+                       class="person-name link">
                         {{ person.name }}
                     </a>
 
                     <p class="person-degree">{{ person.degree }}</p>
 
                     {% if person.email and person.email != "" %}
-                    <a href="mailto:{{ person.email }}" class="person-email link">
-                        {{ person.email }}
+                    <a href="mailto:{{ person.email }}" class="person-email">
+                        <i class="lni lni-envelope" aria-hidden="true"></i>
+                        <span>Email</span>
                     </a>
                     {% endif %}
                 </div>
-
             </article>
             {% endfor %}
         </div>
     </section>
 
     <!-- Undergraduate Students -->
-    <section id="people-bs-list-div" class="people-list-div student-section">
-        <h3 class="subsection-title">Undergraduate Students</h3>
+    <section id="people-bs-list-div"
+             class="people-section student-section"
+             aria-labelledby="undergraduate-title">
 
-        <div class="people-list-div-container student-grid">
+        <h2 id="undergraduate-title" class="section-title">
+            Undergraduate Students
+        </h2>
+
+        <div class="people-grid student-grid">
             {% for person in site.data.undergraduate %}
             <article class="person-card student-card">
-
                 <div class="student-image-wrap">
-                    <a href="{{ person.link }}" class="person-image-link">
+                    <a href="{{ person.link }}"
+                       class="person-image-link"
+                       aria-label="View {{ person.name }}">
                         <img
                             class="person-img"
                             src="/public/images/students/{{ person.image }}"
@@ -99,44 +127,48 @@ css: public/css/people.css
                     </a>
                 </div>
 
-                <div class="student-details">
-                    <a href="{{ person.link }}" class="person-name link">
+                <div class="person-details student-details">
+                    <a href="{{ person.link }}"
+                       class="person-name link">
                         {{ person.name }}
                     </a>
 
                     <p class="person-degree">{{ person.degree }}</p>
 
                     {% if person.email and person.email != "" %}
-                    <a href="mailto:{{ person.email }}" class="person-email link">
-                        {{ person.email }}
+                    <a href="mailto:{{ person.email }}" class="person-email">
+                        <i class="lni lni-envelope" aria-hidden="true"></i>
+                        <span>Email</span>
                     </a>
                     {% endif %}
                 </div>
-
             </article>
             {% endfor %}
         </div>
     </section>
 
     <!-- Graduates -->
-    <section id="people-graduate-list-div" class="people-list-div graduates-section">
-        <h3 class="subsection-title">Graduates</h3>
+    <section id="people-graduate-list-div"
+             class="people-section graduates-section"
+             aria-labelledby="graduates-title">
 
-        <div class="people-list-div-container graduates-grid">
+        <h2 id="graduates-title" class="section-title">
+            Alumni
+        </h2>
+
+        <div class="people-grid graduates-grid">
             {% for person in site.data.graduates %}
             <article class="graduate-card">
-
                 <div class="graduate-details">
-                    <a href="{{ person.link }}" class="graduate-name link">
+                    <a href="{{ person.link }}"
+                       class="graduate-name link">
                         {{ person.name }}
                     </a>
 
                     <p class="graduate-degree">{{ person.degree }}</p>
                 </div>
-
             </article>
             {% endfor %}
         </div>
     </section>
-
-</div>
+</main>

@@ -1,40 +1,177 @@
 
-:root {
-    --font-xs: 0.75rem;
-    --font-sm: 0.8125rem;
-    --font-base-sm: 0.875rem;
-    --font-md-sm: 0.9375rem;
-    --font-base: 1rem;
-    --font-md: 1.0625rem;
-    --font-lg: 1.125rem;
-    --font-xl: 1.25rem;
-    --font-2xl: 1.375rem;
-    --font-3xl: 1.5rem;
-    --font-title: 1.625rem;
-    --font-display: 1.875rem;
-    --font-icon: 2rem;
+/* =========================================================
+   DLSU-CIVI WEBSITE
+   Global stylesheet: public/css/index.css
 
+   Shared design system for all website pages.
+   Page-specific styles belong in about.css, people.css, etc.
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL DESIGN TOKENS
+   ========================================================= */
+
+:root {
+    /* Typography scale */
+    --font-xs: 0.75rem;          /* 12px */
+    --font-sm: 0.8125rem;        /* 13px */
+    --font-base-sm: 0.875rem;    /* 14px */
+    --font-md-sm: 0.9375rem;     /* 15px */
+    --font-base: 1rem;           /* 16px */
+    --font-md: 1.0625rem;        /* 17px */
+    --font-lg: 1.125rem;         /* 18px */
+    --font-xl: 1.25rem;          /* 20px */
+    --font-2xl: 1.375rem;        /* 22px */
+    --font-3xl: 1.5rem;          /* 24px */
+    --font-title: 1.625rem;      /* 26px */
+    --font-display: 1.875rem;    /* 30px */
+    --font-icon: 2rem;           /* 32px */
+
+    /* Responsive heading sizes */
+    --font-page-title: clamp(2rem, 4vw, 3rem);
+    --font-section-title: clamp(1.65rem, 3vw, 2.4rem);
+
+    /* Brand colors */
     --civi-navy: #102b59;
     --civi-green: #007b58;
+
+    /* Text colors */
+    --civi-black: #111111;
     --civi-text: #263b59;
     --civi-muted: #667894;
-    --civi-border: #dfe7ef;
+    --civi-email: #7b8781;
+
+    /* Background colors */
+    --civi-white: #ffffff;
+    --civi-surface: #ffffff;
     --civi-soft: #f3f7fa;
+    --civi-surface-muted: #edf1f5;
+
+    /* Borders */
+    --civi-border: #dfe7ef;
+    --civi-border-strong: #c4d5e2;
+    --border-width: 1px;
+
+    /* Accessibility */
+    --civi-focus: #6b9d80;
+
+    /* Typography families */
+    --font-heading: 'Lato', sans-serif;
+    --font-body: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-navigation: 'Raleway', sans-serif;
+
+    /* Content widths */
+    --content-width: 80vw;
+    --content-width-mobile: 90vw;
+    --content-max-width: 1200px;
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+
+    /* Component styling */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    /* Shared shadows */
+    --shadow-soft: 0 8px 24px rgba(16, 43, 89, 0.07);
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+/* =========================================================
+   2. RESET AND BASE STYLES
+   ========================================================= */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -44,116 +181,317 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
-html,
-body {
+/* Consistent sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
     overflow-x: clip;
+    scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
-    color: black;
+    min-width: 0;
+    overflow-x: clip;
+    color: var(--civi-black);
+    background-color: var(--civi-white);
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
 }
+
+/* Avoid unintended overflow from long text and media */
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   3. MAIN SITE CONTAINER
+   ========================================================= */
 
 #container {
-    margin: auto;
     display: flex;
     flex-direction: column;
-}
-
-#header.header {
-    display: block;
-    position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    border-bottom: 0.5px solid #DBDBDB;
-}
-
-.header-main {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-items: center;
-}
-
-#title {
-    display: flex;
-    flex-direction: row;
-}
-
-#title-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: black;
-    text-decoration: none;
-}
-
-#title-name:hover {
-    color: #002061;
-}
-
-.title-name-small {
-    font-weight: 300;
-}
-
-#nav-bar {
-    display: flex;
-}
-
-.nav-item {
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
-    margin-right: 20px;
-    align-self: flex-start;
-}
-
-.link {
-    text-decoration: none;
-    color: black;
-}
-
-.link:hover {
-    text-decoration: underline;
-    color: #002061;
-}
-
-.link-activated {
-    text-decoration: none;
-    color: #002061;
-}
-
-.link-activated:hover {
-    text-decoration: underline;
-}
-
-.body-text {
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: 0.2px;
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    min-width: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #wrapper {
     display: flex;
     align-items: flex-start;
+    min-width: 0;
 }
 
-div.footer-link {
+#content {
+    width: 100%;
+    min-width: 0;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#main-content {
+    width: 100%;
+    min-width: 0;
+}
+
+.content-row {
     display: flex;
-    align-items: flex-start;
+    min-width: 0;
 }
 
-div.footer-link i::before {
-    font-size: var(--font-xs);
-    color: #A6A6A6;
-    margin-right: 10px;
+
+/* =========================================================
+   4. SHARED PAGE AND SECTION TITLES
+   ========================================================= */
+
+/*
+   Main title of any webpage.
+
+   Usage:
+   <h1 class="page-title">About CIVI</h1>
+*/
+
+.page-title {
+    margin: 0;
+    padding: 20px 0 0;
+    color: var(--civi-black);
+    font-family: var(--font-heading);
+    font-size: var(--font-page-title);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
 }
+
+/*
+   Major subsection heading.
+
+   Usage:
+   <h2 class="section-title">Research Areas</h2>
+*/
+
+.section-title {
+    margin: 0 0 26px;
+    padding: 0;
+    color: var(--civi-black);
+    font-family: var(--font-heading);
+    font-size: var(--font-section-title);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+/* Tertiary heading */
+
+.subsubsection-title {
+    color: var(--civi-navy);
+    font-family: var(--font-heading);
+    font-size: var(--font-xl);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+}
+
+/* Shared text utility */
+
+.body-text {
+    color: var(--civi-text);
+    font-family: var(--font-body);
+    letter-spacing: 0.2px;
+}
+
+.content-small {
+    color: var(--civi-text);
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    letter-spacing: 0.2px;
+    line-height: 1.75;
+}
+
+/* General content heading */
+
+.content-header {
+    margin-top: var(--space-10);
+    margin-bottom: 30px;
+    color: var(--civi-navy);
+    font-family: var(--font-body);
+    font-size: var(--font-lg);
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    line-height: 1.4;
+}
+
+.content-emp {
+    font-weight: 600;
+}
+
+.content-it {
+    font-style: italic;
+}
+
+
+/* =========================================================
+   5. HEADER AND BRANDING
+   ========================================================= */
+
+#header.header {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 0.5px solid var(--civi-border);
+    background-color: var(--civi-white);
+}
+
+.header-main {
+    display: flex;
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    min-width: 0;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Logo and site title */
+
+#title {
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    align-items: center;
+}
+
+#header-logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    flex: 0 0 auto;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+#title-name {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    color: var(--civi-black);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+#title-name:hover {
+    color: var(--civi-navy);
+}
+
+.title-name-small {
+    font-size: var(--font-lg);
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.title-name-big {
+    font-size: var(--font-display);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   6. NAVIGATION
+   ========================================================= */
+
+#nav-bar {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-item {
+    align-self: flex-start;
+    margin-right: 20px;
+    font-family: var(--font-navigation);
+    font-size: var(--font-base);
+    letter-spacing: 1px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.link {
+    color: var(--civi-black);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--civi-navy);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.link-activated {
+    color: var(--civi-navy);
+    text-decoration: none;
+}
+
+.link-activated:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Dropdown navigation */
 
 .dropdown-button {
     cursor: pointer;
@@ -167,10 +505,12 @@ div.footer-link i::before {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    z-index: 10;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    border: var(--border-width) solid var(--civi-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--civi-white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .dropdown-content.right {
@@ -179,113 +519,69 @@ div.footer-link i::before {
 
 .dropdown-content a {
     display: block;
-    color: black;
     padding: 12px 16px;
+    color: var(--civi-text);
+    font-family: var(--font-navigation);
+    font-size: var(--font-base);
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--civi-soft);
+    color: var(--civi-navy);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
 }
 
+/* Mobile navigation trigger */
+
 #nav-bar-drop {
+    display: none;
     margin-left: auto;
 }
 
 #nav-bar-drop-button {
-    background-color: white;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2px;
     border: none;
+    background-color: transparent;
+    color: var(--civi-navy);
     font-size: var(--font-icon);
+    cursor: pointer;
 }
 
-#content {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 50px;
+#nav-bar-drop-button:focus-visible {
+    outline: 2px solid var(--civi-focus);
+    outline-offset: 4px;
 }
 
-#main-title {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    padding-top: 20px;
-}
 
-#main-content {
-    width: 100%;
-}
-
-.content-row {
-    display: flex;
-}
-
-.content-header {
-    font-size: var(--font-lg);
-    margin-top: 40px;
-    margin-bottom: 30px;
-    letter-spacing: 1.2px;
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.content-emp {
-    font-weight: 600;
-}
-
-.content-it {
-    font-style: italic;
-}
-
-.content-small {
-    font-size: var(--font-base);
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: 0.2px;
-    line-height: 22px;
-    margin-top: 15px;
-}
+/* =========================================================
+   7. GENERAL CONTENT AND SUBSECTIONS
+   ========================================================= */
 
 .content-col2.main-col2 {
-    margin-top: 40px;
+    margin-top: var(--space-10);
 }
 
-#index-main-content {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-}
-
-#index-description {
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: var(--font-lg);
-    letter-spacing: 0.2px;
-    line-height: 25px;
-    margin-top: 40px;
-}
-
-#index-teaser-images {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-#index-teaser-images img {
-    width: 100%;
-    border-radius: 10px;
-}
+/* Legacy content structure used by existing pages */
 
 .subsection-title {
-    font-family: 'Lato', sans-serif;
+    padding-top: var(--space-10);
+    color: var(--civi-black);
+    font-family: var(--font-heading);
+    font-size: var(--font-2xl);
     font-weight: 700;
     letter-spacing: 1px;
-    padding-top: 40px;
-    font-size: var(--font-2xl);
+    line-height: 1.3;
 }
+
+/* Keep spacing for existing research subsection markup */
 
 .subsubsection:nth-child(2) {
     margin-top: 25px;
@@ -297,70 +593,134 @@ div.footer-link i::before {
 
 .subsubsection h4,
 .subsubsection-title {
-    font-family: 'Lato', sans-serif;
+    color: var(--civi-navy);
+    font-family: var(--font-heading);
+    font-size: var(--font-xl);
     font-weight: 700;
     letter-spacing: 0.2px;
-    font-size: var(--font-xl);
+    line-height: 1.4;
 }
 
 .subsubsection ol {
     margin-top: 20px;
-    list-style-position: inside;
+    padding-left: 24px;
+    list-style-position: outside;
 }
 
 .subsubsection ol li {
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: var(--space-2);
+    padding-left: 4px;
+    color: var(--civi-text);
+    font-family: var(--font-body);
+    font-size: var(--font-base);
     letter-spacing: 0.2px;
-    line-height: 22px;
+    line-height: 1.75;
 }
+
+
+/* =========================================================
+   8. HOMEPAGE
+   ========================================================= */
+
+#index-main-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+#index-description {
+    margin-top: var(--space-10);
+    color: var(--civi-text);
+    font-family: var(--font-body);
+    font-size: var(--font-lg);
+    letter-spacing: 0.2px;
+    line-height: 1.75;
+}
+
+/* Homepage teaser images */
+
+#index-teaser-images {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+#index-teaser-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+/*
+   Keep homepage-specific headings in their own stylesheet
+   when they differ from the shared .page-title and
+   .section-title styles.
+*/
+
+
+/* =========================================================
+   9. FOOTER
+   ========================================================= */
 
 #footer.footer {
     display: block;
     position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    background: #000000;
-    color: #ffffff;
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--civi-black);
+    color: var(--civi-white);
+    font-family: var(--font-body);
 }
+
+/* Footer columns */
 
 .footer-main {
     display: grid;
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    min-width: 0;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 36px;
-    padding: 20px 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .footer-brand,
 .footer-column {
     display: flex;
+    min-width: 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    min-width: 0;
 }
 
 .footer-brand a,
 .footer-column a {
-    color: #ffffff;
+    color: var(--civi-white);
     font-size: var(--font-sm);
-    line-height: 1.7;
     letter-spacing: 0.2px;
-    text-decoration: none;
+    line-height: 1.7;
     overflow-wrap: anywhere;
+    text-decoration: none;
 }
 
 .footer-brand a:hover,
 .footer-column a:hover {
-    color: #ffffff;
+    color: var(--civi-white);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
 .footer-brand .footer-name {
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
+    color: var(--civi-white);
+    font-family: var(--font-heading);
     font-size: var(--font-md);
     font-weight: 700;
     line-height: 1.45;
@@ -368,12 +728,14 @@ div.footer-link i::before {
 
 .footer-column h3 {
     margin: 0 0 5px;
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
+    color: var(--civi-white);
+    font-family: var(--font-heading);
     font-size: var(--font-md-sm);
     font-weight: 700;
     letter-spacing: 0.3px;
 }
+
+/* Footer social links */
 
 .footer-social a {
     display: flex;
@@ -383,28 +745,81 @@ div.footer-link i::before {
 
 .footer-social i {
     width: 16px;
-    color: #ffffff;
+    flex: 0 0 auto;
+    color: var(--civi-white);
     font-size: var(--font-md-sm);
     text-align: center;
 }
 
-/* Mobile and tablet */
+/* Footer icons */
+
+div.footer-link {
+    display: flex;
+    align-items: flex-start;
+}
+
+div.footer-link i::before {
+    margin-right: 10px;
+    color: #a6a6a6;
+    font-size: var(--font-xs);
+}
+
+
+/* =========================================================
+   10. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--civi-focus);
+    outline-offset: 3px;
+}
+
+/* Prevent motion for visitors who request reduced animation */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================================================
+   11. TABLET AND MOBILE
+   ========================================================= */
+
 @media (max-width: 1000px) {
-    #container,
-    .header-main,
-    .footer-main {
-        width: 90vw;
+
+    /* Main layout */
+
+    #container {
+        width: var(--content-width-mobile);
     }
 
-    .header-main,
-    .footer-main {
-        padding: 30px;
-        margin-left: auto;
-        margin-right: auto;
+    #wrapper {
+        flex-direction: column;
     }
 
-    #header {
-        flex-direction: row;
+    #content {
+        margin-top: var(--space-6);
+        margin-bottom: var(--space-10);
+    }
+
+    /* Header */
+
+    .header-main {
+        width: var(--content-width-mobile);
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     #header-logo {
@@ -423,59 +838,72 @@ div.footer-link i::before {
 
     .title-name-big {
         font-size: var(--font-xl);
-        line-height: 20px;
+        line-height: 1.25;
     }
+
+    /* Switch to dropdown navigation */
 
     #nav-bar {
         display: none;
     }
 
-    #wrapper {
-        flex-direction: column;
+    #nav-bar-drop {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
     }
 
     #nav-bar-drop-button {
         margin-left: auto;
     }
 
-    #main-title {
-        font-size: var(--font-3xl);
+    /* Shared page titles */
+
+    .page-title {
         text-align: center;
     }
+
+    .section-title {
+        margin-bottom: var(--space-5);
+    }
+
+    /* General content */
 
     .content-header {
         width: 100%;
         text-align: center;
     }
 
+    /* Footer */
+
     .footer-main {
-        /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
+        width: var(--content-width-mobile);
         grid-template-columns: 1fr;
-        gap: 32px;
-        padding-right: 12px;
-        padding-left: 12px;
+        gap: var(--space-8);
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 
-/* Desktop */
-@media (min-width: 1000px) {
-    #container,
-    .header-main,
-    .footer-main {
-        width: 80vw;
+
+/* =========================================================
+   12. DESKTOP
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+    #container {
+        width: var(--content-width);
     }
 
     .header-main,
     .footer-main {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 50px;
+        width: var(--content-width);
     }
 
     #header-logo {
         width: 100px;
         height: 100px;
-        border-radius: 20px;
     }
 
     #title-name {
@@ -488,7 +916,7 @@ div.footer-link i::before {
 
     .title-name-big {
         font-size: var(--font-display);
-        line-height: 28px;
+        line-height: 1.2;
     }
 
     #nav-bar {
@@ -498,8 +926,137 @@ div.footer-link i::before {
     #nav-bar-drop {
         display: none;
     }
+}
 
-    #main-title {
-        font-size: var(--font-title);
+
+/* =========================================================
+   13. SMALL MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 580px) {
+
+    /* Main layout */
+
+    #container {
+        width: var(--content-width-mobile);
+    }
+
+    #content {
+        margin-top: var(--space-5);
+        margin-bottom: var(--space-8);
+    }
+
+    /* Header */
+
+    .header-main {
+        width: var(--content-width-mobile);
+        padding-top: var(--space-5);
+        padding-bottom: var(--space-5);
+    }
+
+    #header-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--radius-md);
+    }
+
+    #title-name {
+        margin-left: var(--space-2);
+        letter-spacing: 0.4px;
+    }
+
+    .title-name-small {
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .title-name-big {
+        font-size: var(--font-base);
+        line-height: 1.25;
+    }
+
+    #nav-bar-drop-button {
+        font-size: var(--font-3xl);
+    }
+
+    /* Shared headings */
+
+    .page-title {
+        padding-top: 12px;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .section-title {
+        font-size: 1.65rem;
+        line-height: 1.25;
+    }
+
+    .subsection-title {
+        padding-top: var(--space-6);
+        font-size: var(--font-xl);
+        line-height: 1.35;
+    }
+
+    .subsubsection {
+        margin-top: var(--space-8);
+    }
+
+    .subsubsection h4,
+    .subsubsection-title {
+        font-size: var(--font-lg);
+    }
+
+    /* Body text */
+
+    .content-small {
+        font-size: var(--font-base);
+        line-height: 1.75;
+    }
+
+    .content-header {
+        margin-top: var(--space-8);
+        margin-bottom: var(--space-5);
+        font-size: var(--font-base);
+        line-height: 1.5;
+    }
+
+    #index-main-content {
+        padding: var(--space-2) 0;
+    }
+
+    #index-description {
+        margin-top: var(--space-6);
+        font-size: var(--font-base);
+        line-height: 1.75;
+    }
+
+    /* Stack teaser images when needed */
+
+    #index-teaser-images {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    /* Footer */
+
+    .footer-main {
+        width: var(--content-width-mobile);
+        gap: var(--space-6);
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-brand .footer-name {
+        font-size: var(--font-base);
+    }
+
+    .footer-column h3 {
+        font-size: var(--font-base-sm);
+    }
+
+    .footer-brand a,
+    .footer-column a {
+        font-size: var(--font-sm);
     }
 }

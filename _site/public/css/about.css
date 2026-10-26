@@ -1,155 +1,152 @@
 
-/* About page */
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+
 .about-page {
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    padding: 10px 0;
+    gap: var(--space-12);
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0 20px;
+    color: var(--civi-text);
+    font-family: var(--font-body);
+    box-sizing: border-box;
 }
 
-/* Intro heading, styled like News & Highlights */
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+    box-sizing: border-box;
+}
+
+/* Introduction */
+
 .about-intro {
     max-width: 900px;
-    padding: 24px 0 0;
+    padding-top: var(--space-4);
 }
 
-.about-intro .eyebrow {
-    margin-bottom: 14px;
-    color: var(--civi-green);
-    font-family: 'Lato', sans-serif;
-    font-size: var(--font-sm);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.about-intro .page-title {
+    padding-top: 0;
+    text-align: left;
 }
 
-.about-intro h1 {
+.about-description {
     max-width: 900px;
-    color: #111111;
-    font-family: 'Lato', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -0.7px;
-    line-height: 1.15;
-}
-
-.about-intro .section-subtitle {
-    max-width: 900px;
-    margin-top: 18px;
-    color: #555555;
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: var(--font-lg);
-    line-height: 1.7;
-    letter-spacing: 0.1px;
-}
-
-.section-heading h2 {
-    margin: 0;
-    color: #000000;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-    font-family: 'Lato', sans-serif;
-}
-
-.section-subtitle {
-    margin: 8px 0 0;
+    margin-top: var(--space-5);
     color: var(--civi-muted);
-    font-size: 1rem;
-    line-height: 1.6;
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-/* Introductory paragraph */
-.about-page #main-content {
-    width: 100%;
-}
-
-.about-page #about-div {
-    width: 100%;
-    margin: 0;
-}
-
-.about-page #about-div .content-small {
-    max-width: 900px;
-    margin-top: 0;
+    font-family: var(--font-body);
     font-size: var(--font-base);
+    letter-spacing: 0.1px;
     line-height: 1.8;
 }
 
 /* Research areas */
-.about-page #research-programs-div {
-    margin-top: 40px;
+
+.about-research {
+    width: 100%;
+    margin-top: var(--space-2);
 }
 
-.about-page .subsection-title {
-    padding-top: 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: var(--font-2xl);
-    letter-spacing: 0.8px;
+.about-research > .section-title {
+    margin-bottom: var(--space-6);
+    text-align: left;
 }
 
-.about-page .subsubsection {
-    margin-top: 0;
-    padding: 28px 0;
-}
-
-.about-page .subsubsection h4,
-.about-page .subsubsection-title {
-    font-size: var(--font-xl);
-    line-height: 1.4;
-}
-
-.about-page .subsubsection .content-small {
+.research-area {
     max-width: 900px;
-    margin-top: 14px;
-    font-size: var(--font-base);
-    line-height: 1.8;
+    padding: var(--space-6) 0;
 }
 
-.about-page .subsubsection ol {
-    margin-top: 16px;
+.research-area + .research-area {
+    border-top: var(--border-width) solid var(--civi-border);
+}
+
+.research-area .subsubsection-title {
+    margin: 0 0 var(--space-4);
+}
+
+.research-area .content-small {
+    margin-top: var(--space-4);
+}
+
+.research-area ol {
+    margin: var(--space-4) 0 0;
     padding-left: 24px;
     list-style-position: outside;
 }
 
-.about-page .subsubsection ol li {
+.research-area ol li {
     padding-left: 6px;
-    margin-bottom: 10px;
-    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: var(--space-3);
+    color: var(--civi-text);
+    font-family: var(--font-body);
     font-size: var(--font-base);
     letter-spacing: 0.1px;
     line-height: 1.75;
 }
 
-/* Responsive */
+.research-area ol li:last-child {
+    margin-bottom: 0;
+}
+
+/* Tablet */
+
 @media (max-width: 1000px) {
     .about-page {
-        gap: 36px;
+        gap: var(--space-8);
     }
 
     .about-intro {
         max-width: 100%;
-        padding-top: 10px;
+        padding-top: var(--space-2);
+    }
+
+    .about-description,
+    .research-area {
+        max-width: 100%;
     }
 }
 
+/* Mobile */
+
 @media (max-width: 580px) {
     .about-page {
-        gap: 30px;
+        gap: var(--space-6);
+        padding-top: var(--space-2);
     }
 
-    .about-intro h1 {
-        font-size: 2rem;
+    .about-intro .page-title,
+    .about-research > .section-title {
+        text-align: left;
     }
 
-    .about-intro .section-subtitle {
+    .about-description {
+        margin-top: var(--space-4);
         font-size: var(--font-base);
-        line-height: 1.7;
+        line-height: 1.75;
     }
 
-    .about-page .subsubsection {
-        padding: 22px 0;
+    .about-research > .section-title {
+        margin-bottom: var(--space-4);
+    }
+
+    .research-area {
+        padding: var(--space-5) 0;
+    }
+
+    .research-area .subsubsection-title {
+        margin-bottom: var(--space-3);
+    }
+
+    .research-area ol {
+        padding-left: 22px;
+    }
+
+    .research-area ol li {
+        padding-left: 2px;
+        margin-bottom: var(--space-3);
     }
 }
