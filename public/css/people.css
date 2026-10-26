@@ -1,65 +1,446 @@
-.content-row, .content-row-min {
-    margin-top: 20px;
+
+/* ==============================
+   PEOPLE PAGE
+   ============================== */
+
+#main-content {
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.content-col1 {
-    display: inline;
-    text-align: right;
+.people-list-div {
+    width: 100%;
+    margin-bottom: 48px;
 }
 
-.content-col2 {
-    display: inline;
+.people-list-div .subsection-title {
+    margin-bottom: 22px;
 }
+
+/* ==============================
+   SHARED GRID AND CARD STYLES
+   ============================== */
+
+.people-list-div-container {
+    display: grid;
+    width: 100%;
+    gap: 28px 22px;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.person-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.person-image-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+/* All profile images maintain a 1:1 aspect ratio */
 
 .person-img {
+    display: block;
     width: 100%;
+    aspect-ratio: 1 / 1;
     height: auto;
-    box-sizing: border-box;
     object-fit: cover;
-    border-radius: 20px;
+    object-position: center;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
-.content-single-col {
+/* ==============================
+   NAME AND EMAIL ICON
+   ============================== */
+
+.person-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
+}
+
+.person-name {
+    display: block;
+    min-width: 0;
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.person-name:hover,
+.graduate-name:hover {
+    text-decoration: underline;
+}
+
+/* Subtle email icon instead of visible email addresses */
+
+.person-email-icon {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    color: #89958f;
+    font-size: 15px;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.person-email-icon:hover,
+.person-email-icon:focus-visible {
+    color: #286c54;
+}
+
+.person-email-icon:focus-visible {
+    outline: 2px solid #6b9d80;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* ==============================
+   PERSON DETAILS
+   ============================== */
+
+.person-degree {
+    margin: 7px 0;
+    color: #4e5854;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.person-specialization {
+    margin: 8px 0;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   FACULTY MEMBERS
+   Four columns on desktop
+   ============================== */
+
+.faculty-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 24px;
+}
+
+.faculty-card {
+    overflow: hidden;
+    border: 1px solid #e3e8e5;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.faculty-card .person-image-link {
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+.faculty-card .person-img {
+    border-radius: 0;
+    transition: transform 0.25s ease;
+}
+
+.faculty-card .person-image-link:hover .person-img {
+    transform: scale(1.03);
+}
+
+.faculty-card .person-details {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.faculty-card .person-heading {
     width: 100%;
 }
 
-/* mobile */
-@media (max-width: 1000px) {
+.faculty-card .person-name {
+    font-size: 17px;
+}
 
-    .content-col1 {
-        width: 80px;
+.faculty-card .person-specialization {
+    margin-bottom: 0;
+}
+
+/* ==============================
+   STUDENTS
+   Five columns on desktop
+   Names below images
+   ============================== */
+
+.student-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 28px 18px;
+}
+
+.student-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.student-image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #e9eeeb;
+}
+
+.student-image-wrap .person-image-link {
+    width: 100%;
+    height: 100%;
+}
+
+.student-image-wrap .person-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0;
+    transition: transform 0.25s ease;
+}
+
+.student-card:hover .person-img {
+    transform: scale(1.03);
+}
+
+/* Names and degrees are placed below the image */
+
+.student-details {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 2px 0;
+    box-sizing: border-box;
+}
+
+.student-details .person-heading {
+    width: 100%;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.student-details .person-name {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.student-details .person-email-icon {
+    font-size: 13px;
+}
+
+.student-details .person-degree {
+    margin: 5px 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* ==============================
+   GRADUATES
+   Compact directory
+   ============================== */
+
+.graduates-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px 22px;
+}
+
+.graduate-card {
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+    height: 100%;
+    padding: 10px 12px;
+    border-left: 3px solid #DBDBDB;
+    /*background: #f7f9f8;*/
+    box-sizing: border-box;
+}
+
+.graduate-details {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.graduate-details .person-heading {
+    align-items: baseline;
+}
+
+.graduate-name {
+    display: block;
+    min-width: 0;
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.graduate-degree {
+    margin: 4px 0 0;
+    color: #59625e;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   CONSISTENT CARD HEIGHTS
+   ============================== */
+
+/* Stretch cards to the height of the tallest card in each grid row */
+
+.faculty-grid,
+.student-grid,
+.graduates-grid {
+    align-items: stretch;
+}
+
+.faculty-card .person-details,
+.student-card .student-details {
+    box-sizing: border-box;
+}
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 1100px) {
+    .faculty-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .content-col2 {
-        width: 60%;
-        margin-left: 20px;
+    .student-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .graduates-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-/* web */
-@media (min-width:  1000px) {
+/* ==============================
+   SMALL TABLET
+   ============================== */
+
+@media (max-width: 800px) {
+    .people-list-div {
+        margin-bottom: 38px;
+    }
 
     .people-list-div-container {
-        display: flex;
-        flex-wrap: wrap;
+        gap: 22px 16px;
     }
 
-    .content-row {
-        width: 50%;
+    .faculty-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .content-row-min {
-        width: 25%;
+    .student-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .content-col1 {
-        width: 100px;
+    .graduates-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .content-col2 {
-        width: 70%;
-        margin-left: 20px;
-        font-size: 16px;
+    .faculty-card .person-details {
+        padding: 12px;
+    }
+
+    .faculty-card .person-name {
+        font-size: 15px;
     }
 }
 
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 520px) {
+    .people-list-div {
+        margin-bottom: 32px;
+    }
+
+    .people-list-div .subsection-title {
+        margin-bottom: 16px;
+    }
+
+    .people-list-div-container {
+        gap: 18px 12px;
+    }
+
+    .faculty-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .student-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .graduates-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .faculty-card .person-details {
+        padding: 10px;
+    }
+
+    .faculty-card .person-name {
+        font-size: 14px;
+    }
+
+    .faculty-card .person-degree,
+    .faculty-card .person-specialization {
+        font-size: 12px;
+    }
+
+    .student-details .person-name {
+        font-size: 12px;
+    }
+
+    .student-details .person-degree {
+        font-size: 11px;
+    }
+
+    .student-details .person-email-icon {
+        font-size: 12px;
+    }
+
+    .graduate-card {
+        padding: 8px;
+    }
+
+    .graduate-name {
+        font-size: 12px;
+    }
+
+    .graduate-degree {
+        font-size: 10px;
+    }
+}

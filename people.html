@@ -4,75 +4,169 @@ title: Center for Computational Imaging & Visual Innovations | People
 additional_css: true
 css: public/css/people.css
 ---
-<h2 id="main-title"> PEOPLE </h2>
+<h2 id="main-title">PEOPLE</h2>
+
 <div id="main-content">
-    <div id="people-faculty-list-div" class="people-list-div">
-        <h3 class="subsection-title"> Faculty Members </h3>
-        <div class="people-list-div-container">
+
+    <!-- Faculty Members -->
+    <section id="people-faculty-list-div" class="people-list-div faculty-section">
+        <h3 class="subsection-title">Faculty Members</h3>
+
+        <div class="people-list-div-container faculty-grid">
             {% for person in site.data.faculty %}
-                <div class="content-row">
-                    <div class="content-col1">
-                        <a href="/"> <img class="person-img" src="/public/images/faculty/{{ person.image }}"> </a>
+            <article class="person-card faculty-card">
+
+                <a href="{{ person.link }}" class="person-image-link">
+                    <img
+                        class="person-img"
+                        src="/public/images/faculty/{{ person.image }}"
+                        alt="{{ person.name }}"
+                        loading="lazy">
+                </a>
+
+                <div class="person-details">
+                    <div class="person-heading">
+                        <a href="{{ person.link }}" class="person-name link">
+                            {{ person.name }}
+                        </a>
+
+                        {% if person.email and person.email != "" %}
+                        <a
+                            href="mailto:{{ person.email }}"
+                            class="person-email-icon"
+                            aria-label="Email {{ person.name }}"
+                            title="Email {{ person.name }}">
+                            <i class="lni lni-envelope" aria-hidden="true"></i>
+                        </a>
+                        {% endif %}
                     </div>
-                    <div class="content-col2">
-                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
-                        <p class="body-text content-it"> {{ person.degree }} </p>
-                        <p class="body-text"> {{ person.specialization }} </p>
-                        <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
-                    </div>
+
+                    <p class="person-degree">{{ person.degree }}</p>
+                    <p class="person-specialization">{{ person.specialization }}</p>
                 </div>
+
+            </article>
             {% endfor %}
         </div>
-    </div>
-    <div id="people-bsmscs-list-div" class="people-list-div">
-        <h3 class="subsection-title"> BSMSCS Students </h3>
-        <div class="people-list-div-container">
+    </section>
+
+    <!-- BSMSCS Students -->
+    <section id="people-bsmscs-list-div" class="people-list-div student-section">
+        <h3 class="subsection-title">BSMSCS Students</h3>
+
+        <div class="people-list-div-container student-grid">
             {% for person in site.data.bsmscs %}
-                <div class="content-row">
-                    <div class="content-col1">
-                        <a href="/"> <img class="person-img" src="/public/images/students/{{ person.image }}"> </a>
-                    </div>
-                    <div class="content-col2">
-                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
-                        <p class="body-text content-it"> {{ person.degree }} </p>
-                        <!-- <p class="body-text"> {{ person.specialization }} </p> -->
-                        <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
-                    </div>
+            <article class="person-card student-card">
+
+                <div class="student-image-wrap">
+                    <a href="{{ person.link }}" class="person-image-link">
+                        <img
+                            class="person-img"
+                            src="/public/images/students/{{ person.image }}"
+                            alt="{{ person.name }}"
+                            loading="lazy">
+                    </a>
                 </div>
+
+                <div class="student-details">
+                    <div class="person-heading">
+                        <a href="{{ person.link }}" class="person-name link">
+                            {{ person.name }}
+                        </a>
+
+                        {% if person.email and person.email != "" %}
+                        <a
+                            href="mailto:{{ person.email }}"
+                            class="person-email-icon"
+                            aria-label="Email {{ person.name }}"
+                            title="Email {{ person.name }}">
+                            <i class="lni lni-envelope" aria-hidden="true"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    <p class="person-degree">{{ person.degree }}</p>
+                </div>
+
+            </article>
             {% endfor %}
         </div>
-    </div>
-    <div id="people-bs-list-div" class="people-list-div">
-        <h3 class="subsection-title"> Undergraduate Students </h3>
-        <div class="people-list-div-container">
+    </section>
+
+    <!-- Undergraduate Students -->
+    <section id="people-bs-list-div" class="people-list-div student-section">
+        <h3 class="subsection-title">Undergraduate Students</h3>
+
+        <div class="people-list-div-container student-grid">
             {% for person in site.data.undergraduate %}
-                <div class="content-row">
-                    <div class="content-col1">
-                        <a href="/"> <img class="person-img" src="/public/images/students/{{ person.image }}"> </a>
-                    </div>
-                    <div class="content-col2">
-                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
-                        <p class="body-text content-it"> {{ person.degree }} </p>
-                        <!-- <p class="body-text"> {{ person.specialization }} </p> -->
-                        <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a>
-                    </div>
+            <article class="person-card student-card">
+
+                <div class="student-image-wrap">
+                    <a href="{{ person.link }}" class="person-image-link">
+                        <img
+                            class="person-img"
+                            src="/public/images/students/{{ person.image }}"
+                            alt="{{ person.name }}"
+                            loading="lazy">
+                    </a>
                 </div>
+
+                <div class="student-details">
+                    <div class="person-heading">
+                        <a href="{{ person.link }}" class="person-name link">
+                            {{ person.name }}
+                        </a>
+
+                        {% if person.email and person.email != "" %}
+                        <a
+                            href="mailto:{{ person.email }}"
+                            class="person-email-icon"
+                            aria-label="Email {{ person.name }}"
+                            title="Email {{ person.name }}">
+                            <i class="lni lni-envelope" aria-hidden="true"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    <p class="person-degree">{{ person.degree }}</p>
+                </div>
+
+            </article>
             {% endfor %}
         </div>
-    </div>
-    <div id="people-graduate-list-div" class="people-list-div">
-        <h3 class="subsection-title"> Graduates </h3>
-        <div class="people-list-div-container">
+    </section>
+
+    <!-- Graduates -->
+    <section id="people-graduate-list-div" class="people-list-div graduates-section">
+        <h3 class="subsection-title">Graduates</h3>
+
+        <div class="people-list-div-container graduates-grid">
             {% for person in site.data.graduates %}
-                <div class="content-row-min">
-                    <div class="content-single-col">
-                        <a href="{{ person.link }}" class="content-emp subsubsection-title link"> {{ person.name }} </a>
-                        <p class="body-text content-it"> {{ person.degree }} </p>
-                        <!-- <p class="body-text"> {{ person.specialization }} </p> -->
-                        <!-- <a href="mailto:{{ person.email }}" class="body-text link"> {{ person.email }} </a> -->
+            <article class="graduate-card">
+
+                <div class="graduate-details">
+                    <div class="person-heading">
+                        <a href="{{ person.link }}" class="graduate-name link">
+                            {{ person.name }}
+                        </a>
+
+                        {% if person.email and person.email != "" %}
+                        <a
+                            href="mailto:{{ person.email }}"
+                            class="person-email-icon"
+                            aria-label="Email {{ person.name }}"
+                            title="Email {{ person.name }}">
+                            <i class="lni lni-envelope" aria-hidden="true"></i>
+                        </a>
+                        {% endif %}
                     </div>
+
+                    <p class="graduate-degree">{{ person.degree }}</p>
                 </div>
+
+            </article>
             {% endfor %}
         </div>
-    </div>
+    </section>
+
 </div>
