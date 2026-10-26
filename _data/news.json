@@ -2,6 +2,7 @@
     {
         "type": "Conference Presentation",
         "date": "2026 September 14 - 17",
+        "news_title": "Paper Presentation in ICANN 2026 🇮🇹",
         "title": "Architecture-Aware Structured Pruning for Parameter-Efficient Dense Small-Object Detection",
         "event_name": "35th International Conference on Artificial Neural Networks (ICANN)",
         "event_venue": "Padua, Italy 🇮🇹",
@@ -12,17 +13,18 @@
     {
         "type": "Conference Presentation",
         "date": "2026 September 13 - 17",
-        "title": "Multiple Papers Presented in ICIP 2026",
+        "news_title": "Paper Presentation in ICIP 2026 🇫🇮",
+        "title": "A Comprehensive Analysis of Lightweight Design Strategies for Camouflaged Crop Detection and WiSDet: A Windshield-Guided Few-Shot Framework for Detecting Car Stickers in the Wild",
         "event_name": "2026 IEEE International Conference on Image Processing (ICIP)",
         "event_venue": "Tampere, Finland 🇫🇮",
         "presenter_type": "lab head",
         "presenter": "Arren Matthew Antioquia",
         "image": "20260913_antioquia.png",
-        "summary": "Our lab head Arren Matthew Antioquia presented research papers entitled \"A Comprehensive Analysis of Lightweight Design Strategies for Camouflaged Crop Detection\" and \"WiSDet: A Windshield-Guided Few-Shot Framework for Detecting Car Stickers in the Wild\" at the 2026 IEEE International Conference on Image Processing (ICIP), held in Tampere, Finland 🇫🇮."
     },
     {
         "type": "Conference Presentation",
         "date": "2026 June 26 - 28",
+        "news_title": "Paper Presentation in ICGSP 2026 🇯🇵",
         "title": "A Systematic Class-Wise Analysis of Challenges and Network Efficacy in Camouflaged Crop Detection",
         "event_name": "10th International Conference on Graphics and Signal Processing (ICGSP)",
         "event_venue": "Okayama, Japan 🇯🇵",
@@ -33,6 +35,7 @@
     {
         "type": "Awards",
         "date": "2026 February 18",
+        "news_title": "Outstanding Thesis Award - Silver Medal for Hinolan, Javellana, Lapuz, and Tabadero",
         "title": "Outstanding Thesis Award - Silver Medal",
         "event_venue": "DLSU Manila",
         "image": "20260225_cv10.png",
@@ -41,6 +44,7 @@
     {
         "type": "Student Activity",
         "date": "2026 January 27 & 2026 February 17",
+        "news_title": "Focused Research and Manuscript Enhancement (FRAME) Sprint in DLSU Laguna",
         "title": "Focused Research and Manuscript Enhancement (FRAME) Sprint",
         "event_name": "Focused Research and Manuscript Enhancement (FRAME) Sprint",
         "event_venue": "John Gokongwei Innovation Center, DLSU Laguna Campus",
@@ -50,10 +54,11 @@
     {
         "type": "Faculty Engagement",
         "date": "2025 December 11",
+        "news_title": "CIVI joins GAME Lab in DOST-PCIEERD Grand MOA Signing 2025",
         "title": "Game Development Meets Computer Vision",
         "event_name": "DOST-PCIEERD Grand MOA Signing for 2025 Approved Projects",
         "event_venue": "Philippine Trade Training Center",
-        "presenter_type": "faculty member",
+        "presenter_type": "faculty researcher",
         "presenter": "Arren Matthew Antioquia",
         "image": "20251211_antioquia.png",
         "summary": "CIVI participated in the DOST-PCIEERD Grand MOA Signing for 2025 Approved Projects on December 11, 2025, at the Philippine Trade Training Center. The event recognized a DOST-PCIEERD-funded project with DLSU GAME Lab exploring synthetic 3D scenes for computer vision."
@@ -61,16 +66,18 @@
     {
         "type": "Faculty Engagement",
         "date": "2024 October 28",
+        "news_title": "Dr. Virtusio at the 10th DOST BSP Annual Convention",
         "title": "Computer Vision in Agriculture",
         "event_name": "10th DOST-Balik Scientist Program (BSP) Annual Convention",
         "event_venue": "Philippine International Convention Center (PICC)",
-        "presenter_type": "faculty member",
+        "presenter_type": "faculty researcher",
         "presenter": "Dr. John Jethro Virtusio",
         "image": "20241028_virtusio.jpg"
     },
     {
-        "type": "Conference Organizer",
+        "type": "Faculty Engagement",
         "date": "2024 October 18 - 20",
+        "news_title": "Mr. Antioquia as Session Chair in ICBSP 2024 🇭🇰",
         "title": "Machine Learning Models for Biomedical Image Classification Session",
         "event_name": "International Conference on Biomedical Imaging and Signal Processing (ICBSP)",
         "event_venue": "Hong Kong",
@@ -82,6 +89,7 @@
     {
         "type": "Conference Presentation",
         "date": "2024 October 18 - 20",
+        "news_title": "Paper Presentation in ICBSP 2024 🇭🇰",
         "title": "Classifying Skin Diseases using Convolutional Neural Networks",
         "event_name": "International Conference on Biomedical Imaging and Signal Processing (ICBSP)",
         "event_venue": "Hong Kong",
