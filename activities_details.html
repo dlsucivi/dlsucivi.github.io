@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Activity Details | DLSU-CIVI
-permalink: /activities/
+permalink: /activities_details/
 additional_css: true
 css: /public/css/activities_details.css
 ---
@@ -129,7 +129,7 @@ css: /public/css/activities_details.css
 
                         <a
                             class="recent-activities-card-link"
-                            href="{{ '/activities/' | relative_url }}?id={{ activity.slug | uri_escape }}"
+                            href="{{ '/activities_details/' | relative_url }}?id={{ activity.slug | uri_escape }}"
                         >
                             <div class="recent-activities-thumbnail">
                                 {% if activity.image %}

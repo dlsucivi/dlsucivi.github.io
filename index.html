@@ -125,7 +125,7 @@ css: public/css/news.css
                 <h2 id="activites-title">Lectures &amp; Workshops</h2>
                 <p class="section-subtitle">Academic lectures &amp; technical workshops delivered by our students</p>
             </div>
-            <a class="text-link" href="/activity" aria-label="Browse CIVI news source and announcements">
+            <a class="text-link" href="/activities" aria-label="Browse CIVI news source and announcements">
                 View all lectures and workshops <span aria-hidden="true">→</span>
             </a>
         </div>
@@ -152,7 +152,7 @@ css: public/css/news.css
                      data-news-type="{{ activity.type | default: 'CIVI Activity' | escape }}">
 
                 <a class="activities-card-link"
-                   href="{{ '/activities/' | relative_url }}?id={{ activity.slug | uri_escape }}"
+                   href="{{ '/activities_details/' | relative_url }}?id={{ activity.slug | uri_escape }}"
                    aria-label="View {{ activity.title | escape }}">
 
                     <div class="news-card-image">
