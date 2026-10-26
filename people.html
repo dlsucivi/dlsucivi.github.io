@@ -25,24 +25,18 @@ css: public/css/people.css
                 </a>
 
                 <div class="person-details">
-                    <div class="person-heading">
-                        <a href="{{ person.link }}" class="person-name link">
-                            {{ person.name }}
-                        </a>
-
-                        {% if person.email and person.email != "" %}
-                        <a
-                            href="mailto:{{ person.email }}"
-                            class="person-email-icon"
-                            aria-label="Email {{ person.name }}"
-                            title="Email {{ person.name }}">
-                            <i class="lni lni-envelope" aria-hidden="true"></i>
-                        </a>
-                        {% endif %}
-                    </div>
+                    <a href="{{ person.link }}" class="person-name link">
+                        {{ person.name }}
+                    </a>
 
                     <p class="person-degree">{{ person.degree }}</p>
                     <p class="person-specialization">{{ person.specialization }}</p>
+
+                    {% if person.email and person.email != "" %}
+                    <a href="mailto:{{ person.email }}" class="person-email link">
+                        {{ person.email }}
+                    </a>
+                    {% endif %}
                 </div>
 
             </article>
@@ -69,23 +63,17 @@ css: public/css/people.css
                 </div>
 
                 <div class="student-details">
-                    <div class="person-heading">
-                        <a href="{{ person.link }}" class="person-name link">
-                            {{ person.name }}
-                        </a>
-
-                        {% if person.email and person.email != "" %}
-                        <a
-                            href="mailto:{{ person.email }}"
-                            class="person-email-icon"
-                            aria-label="Email {{ person.name }}"
-                            title="Email {{ person.name }}">
-                            <i class="lni lni-envelope" aria-hidden="true"></i>
-                        </a>
-                        {% endif %}
-                    </div>
+                    <a href="{{ person.link }}" class="person-name link">
+                        {{ person.name }}
+                    </a>
 
                     <p class="person-degree">{{ person.degree }}</p>
+
+                    {% if person.email and person.email != "" %}
+                    <a href="mailto:{{ person.email }}" class="person-email link">
+                        {{ person.email }}
+                    </a>
+                    {% endif %}
                 </div>
 
             </article>
@@ -112,23 +100,17 @@ css: public/css/people.css
                 </div>
 
                 <div class="student-details">
-                    <div class="person-heading">
-                        <a href="{{ person.link }}" class="person-name link">
-                            {{ person.name }}
-                        </a>
-
-                        {% if person.email and person.email != "" %}
-                        <a
-                            href="mailto:{{ person.email }}"
-                            class="person-email-icon"
-                            aria-label="Email {{ person.name }}"
-                            title="Email {{ person.name }}">
-                            <i class="lni lni-envelope" aria-hidden="true"></i>
-                        </a>
-                        {% endif %}
-                    </div>
+                    <a href="{{ person.link }}" class="person-name link">
+                        {{ person.name }}
+                    </a>
 
                     <p class="person-degree">{{ person.degree }}</p>
+
+                    {% if person.email and person.email != "" %}
+                    <a href="mailto:{{ person.email }}" class="person-email link">
+                        {{ person.email }}
+                    </a>
+                    {% endif %}
                 </div>
 
             </article>
@@ -145,21 +127,9 @@ css: public/css/people.css
             <article class="graduate-card">
 
                 <div class="graduate-details">
-                    <div class="person-heading">
-                        <a href="{{ person.link }}" class="graduate-name link">
-                            {{ person.name }}
-                        </a>
-
-                        {% if person.email and person.email != "" %}
-                        <a
-                            href="mailto:{{ person.email }}"
-                            class="person-email-icon"
-                            aria-label="Email {{ person.name }}"
-                            title="Email {{ person.name }}">
-                            <i class="lni lni-envelope" aria-hidden="true"></i>
-                        </a>
-                        {% endif %}
-                    </div>
+                    <a href="{{ person.link }}" class="graduate-name link">
+                        {{ person.name }}
+                    </a>
 
                     <p class="graduate-degree">{{ person.degree }}</p>
                 </div>

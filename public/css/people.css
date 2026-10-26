@@ -57,20 +57,12 @@
 }
 
 /* ==============================
-   NAME AND EMAIL ICON
+   PERSON NAME
    ============================== */
-
-.person-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    min-width: 0;
-}
 
 .person-name {
     display: block;
     min-width: 0;
-    color: #000000;
     font-family: 'Lato', sans-serif;
     font-size: 17px;
     font-weight: 600;
@@ -84,26 +76,32 @@
     text-decoration: underline;
 }
 
-/* Subtle email icon instead of visible email addresses */
+/* ==============================
+   EMAIL ADDRESS
+   Subtle, full email text
+   ============================== */
 
-.person-email-icon {
-    display: inline-flex;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    color: #89958f;
-    font-size: 15px;
-    line-height: 1;
+.person-email {
+    display: block;
+    max-width: 100%;
+    margin-top: auto;
+    /*padding-top: 10px;*/
+    color: #7b8781;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     text-decoration: none;
-    transition: color 0.2s ease;
 }
 
-.person-email-icon:hover,
-.person-email-icon:focus-visible {
+.person-email:hover {
     color: #286c54;
+    text-decoration: underline;
 }
 
-.person-email-icon:focus-visible {
+.person-email:focus-visible {
     outline: 2px solid #6b9d80;
     outline-offset: 3px;
     border-radius: 3px;
@@ -170,16 +168,17 @@
     box-sizing: border-box;
 }
 
-.faculty-card .person-heading {
-    width: 100%;
-}
-
 .faculty-card .person-name {
     font-size: 17px;
 }
 
 .faculty-card .person-specialization {
-    margin-bottom: 0;
+    margin-bottom: 12px;
+}
+
+.faculty-card .person-email {
+    width: 100%;
+    margin-top: auto;
 }
 
 /* ==============================
@@ -225,7 +224,7 @@
     transform: scale(1.03);
 }
 
-/* Names and degrees are placed below the image */
+/* Names, degrees, and emails below the image */
 
 .student-details {
     display: flex;
@@ -236,25 +235,22 @@
     box-sizing: border-box;
 }
 
-.student-details .person-heading {
-    width: 100%;
-    align-items: baseline;
-    gap: 6px;
-}
-
 .student-details .person-name {
     font-size: 14px;
     line-height: 1.4;
-}
-
-.student-details .person-email-icon {
-    font-size: 13px;
 }
 
 .student-details .person-degree {
     margin: 5px 0 0;
     font-size: 12px;
     line-height: 1.45;
+}
+
+.student-details .person-email {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 10px;
 }
 
 /* ==============================
@@ -269,28 +265,25 @@
 
 .graduate-card {
     display: flex;
-    align-items: flex-start;
     min-width: 0;
     height: 100%;
     padding: 10px 12px;
     border-left: 3px solid #DBDBDB;
-    /*background: #f7f9f8;*/
     box-sizing: border-box;
 }
 
 .graduate-details {
+    display: flex;
     flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
     min-width: 0;
-}
-
-.graduate-details .person-heading {
-    align-items: baseline;
+    width: 100%;
 }
 
 .graduate-name {
     display: block;
     min-width: 0;
-    color: #000000;
     font-family: 'Lato', sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -308,11 +301,16 @@
     overflow-wrap: anywhere;
 }
 
+.graduate-email {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 10px;
+}
+
 /* ==============================
    CONSISTENT CARD HEIGHTS
    ============================== */
-
-/* Stretch cards to the height of the tallest card in each grid row */
 
 .faculty-grid,
 .student-grid,
@@ -375,6 +373,11 @@
     .faculty-card .person-name {
         font-size: 15px;
     }
+
+    .faculty-card .person-degree,
+    .faculty-card .person-specialization {
+        font-size: 12px;
+    }
 }
 
 /* ==============================
@@ -420,6 +423,10 @@
         font-size: 12px;
     }
 
+    .faculty-card .person-email {
+        font-size: 10px;
+    }
+
     .student-details .person-name {
         font-size: 12px;
     }
@@ -428,8 +435,8 @@
         font-size: 11px;
     }
 
-    .student-details .person-email-icon {
-        font-size: 12px;
+    .student-details .person-email {
+        font-size: 9px;
     }
 
     .graduate-card {
@@ -442,5 +449,9 @@
 
     .graduate-degree {
         font-size: 10px;
+    }
+
+    .graduate-email {
+        font-size: 9px;
     }
 }
