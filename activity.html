@@ -1,0 +1,102 @@
+---
+layout: default
+title: Lectures & Workshops | DLSU-CIVI
+permalink: /activity/
+additional_css: true
+css: /public/css/activity.css
+---
+
+<main id="activity-main-content" class="activity-page">
+
+    <header class="activity-page-header">
+        <h1 class="page_title page-title">Lectures &amp; Workshops</h1>
+        <p class="activity-page-description">
+            Explore academic lectures and technical workshops delivered by our students.
+        </p>
+    </header>
+
+    <!-- Academic lectures -->
+    <section class="activity-section"
+             id="lectures-section"
+             aria-labelledby="lectures-title">
+
+        <div class="activity-section-heading">
+            <div>
+                <h2 class="section_title section-title" id="lectures-title">
+                    Lectures
+                </h2>
+                <p class="activity-section-description">
+                    Research talks and academic discussions on computer vision,
+                    artificial intelligence, and related fields.
+                </p>
+            </div>
+        </div>
+
+        <div class="activity-year-filter"
+             id="lectures-year-filter"
+             role="group"
+             aria-label="Filter lectures by year">
+            <!-- Populated by activity.js -->
+        </div>
+
+        <div class="activity-grid" id="lectures-grid">
+            <!-- Populated by activity.js -->
+        </div>
+
+        <p class="activity-empty" id="lectures-empty" hidden>
+            No lectures are available for this year.
+        </p>
+
+        <p class="activity-results" id="lectures-results" aria-live="polite"></p>
+    </section>
+
+    <!-- Technical workshops -->
+    <section class="activity-section"
+             id="workshops-section"
+             aria-labelledby="workshops-title">
+
+        <div class="activity-section-heading">
+            <div>
+                <h2 class="section_title section-title" id="workshops-title">
+                    Workshops
+                </h2>
+                <p class="activity-section-description">
+                    Hands-on training sessions, technical demonstrations,
+                    and practical learning activities.
+                </p>
+            </div>
+        </div>
+
+        <div class="activity-year-filter"
+             id="workshops-year-filter"
+             role="group"
+             aria-label="Filter workshops by year">
+            <!-- Populated by activity.js -->
+        </div>
+
+        <div class="activity-grid" id="workshops-grid">
+            <!-- Populated by activity.js -->
+        </div>
+
+        <p class="activity-empty" id="workshops-empty" hidden>
+            No workshops are available for this year.
+        </p>
+
+        <p class="activity-results" id="workshops-results" aria-live="polite"></p>
+    </section>
+
+</main>
+
+<!-- Data source: _data/activities.json -->
+<script id="activity-data" type="application/json">
+    {{ site.data.activities | jsonify }}
+</script>
+
+<div id="activity-config"
+     data-details-url="{{ '/activities/' | relative_url }}"
+     data-image-base="{{ '/public/images/activities/' | relative_url }}"
+     data-fallback-image="{{ '/public/images/civi2026.png' | relative_url }}"
+     hidden>
+</div>
+
+<script src="{{ '/public/js/activity.js' | relative_url }}" defer></script>
