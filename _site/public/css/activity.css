@@ -1,17 +1,13 @@
-
 /* =========================================================
    DLSU-CIVI ACTIVITIES PAGE
-   File: public/css/activity.css
-
-   Uses design tokens from index.css and follows the card
-   styling established in news.css.
+   Uses shared typography and design tokens from index.css.
    ========================================================= */
 
 .activity-page {
     width: 100%;
     min-width: 0;
     margin: 0 auto;
-    padding: var(--spacing-lg, 28px) 0 var(--spacing-2xl, 54px);
+    padding: 10px 0 20px;
     color: var(--civi-text);
     font-family: var(--font-body);
 }
@@ -24,28 +20,23 @@
 
 /* =========================================================
    PAGE HEADER
+   Typography is inherited from index.css.
    ========================================================= */
 
 .activity-page-header {
-    margin-bottom: var(--spacing-2xl, 42px);
+    margin-bottom: var(--space-10);
     text-align: left;
 }
 
-.activity-page .page_title,
-.activity-page .page-title {
+.activity-page-header .page-title {
     margin: 0;
     padding: 0;
-    /*color: var(--civi-navy);*/
-    font-family: var(--font-heading);
-    font-size: var(--font-page-title);
-    font-weight: 700;
-    line-height: 1.2;
     text-align: left;
 }
 
 .activity-page-description {
     max-width: 760px;
-    margin: var(--spacing-md, 16px) 0 0;
+    margin: var(--space-4) 0 0;
     color: var(--civi-muted);
     font-size: var(--font-base);
     line-height: 1.8;
@@ -57,38 +48,32 @@
 
 .activity-section {
     min-width: 0;
-    margin-top: var(--spacing-2xl, 48px);
+    margin-top: var(--space-12);
 }
 
 .activity-section + .activity-section {
-    margin-top: var(--spacing-2xl, 58px);
-    padding-top: var(--spacing-xl, 42px);
-    border-top: 1px solid var(--civi-border);
+    margin-top: var(--space-12);
+    padding-top: var(--space-10);
+    border-top: var(--border-width) solid var(--civi-border);
 }
 
 .activity-section-heading {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: var(--spacing-lg, 24px);
-    margin-bottom: var(--spacing-lg, 22px);
+    gap: var(--space-6);
+    margin-bottom: var(--space-5);
 }
 
-.activity-page .section_title,
-.activity-page .section-title {
+.activity-section-heading .section-title {
     margin: 0;
     padding: 0;
-    /*color: var(--civi-navy);*/
-    font-family: var(--font-heading);
-    font-size: var(--font-section-title);
-    font-weight: 700;
-    line-height: 1.3;
     text-align: left;
 }
 
 .activity-section-description {
     max-width: 720px;
-    margin: var(--spacing-sm, 10px) 0 0;
+    margin: var(--space-2) 0 0;
     color: var(--civi-muted);
     font-size: var(--font-base-sm);
     line-height: 1.7;
@@ -102,13 +87,13 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--spacing-sm, 10px);
-    margin: var(--spacing-lg, 22px) 0 var(--spacing-lg, 24px);
+    gap: var(--space-2);
+    margin: var(--space-5) 0 var(--space-6);
 }
 
 .activity-year-btn {
-    padding: var(--spacing-xs, 7px) var(--spacing-md, 14px);
-    border: 1px solid var(--civi-border);
+    padding: 7px var(--space-3);
+    border: var(--border-width) solid var(--civi-border);
     border-radius: 999px;
     background: var(--civi-soft);
     color: var(--civi-text);
@@ -148,7 +133,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
-    gap: var(--spacing-lg, 22px);
+    gap: var(--space-6);
 }
 
 .activity-card {
@@ -156,8 +141,8 @@
     min-width: 0;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid var(--civi-border);
-    border-radius: 9px;
+    border: var(--border-width) solid var(--civi-border);
+    border-radius: var(--radius-md);
     background: var(--civi-surface);
     transition:
         border-color 160ms ease,
@@ -168,7 +153,7 @@
 .activity-card:hover {
     transform: translateY(-3px);
     border-color: var(--civi-border-strong);
-    box-shadow: 0 10px 26px rgba(16, 43, 89, 0.08);
+    box-shadow: var(--shadow-soft);
 }
 
 .activity-card-link {
@@ -220,16 +205,15 @@
     flex: 1;
     flex-direction: column;
     align-items: flex-start;
-    padding: var(--spacing-lg, 22px) var(--spacing-lg, 21px)
-        var(--spacing-lg, 20px);
+    padding: var(--space-5);
 }
 
-/* Category pills: same palette as news.css */
+/* Category labels */
 
 .activity-category {
     display: inline-block;
     max-width: 100%;
-    padding: var(--spacing-xs, 6px) var(--spacing-sm, 10px);
+    padding: 6px var(--space-2);
     border-radius: 999px;
     font-size: var(--font-xs);
     font-weight: 700;
@@ -240,24 +224,26 @@
 }
 
 .activity-category.category-lecture {
-    background: #e0f5ee;
-    color: #006d50;
+    background: var(--civi-soft);
+    color: var(--civi-green);
 }
 
 .activity-category.category-workshop {
-    background: #fbe9e9;
-    color: #9b3037;
+    background: var(--civi-surface-muted);
+    color: var(--civi-navy);
 }
 
+/* Card text */
+
 .activity-card-date {
-    margin: var(--spacing-md, 14px) 0 var(--spacing-xs, 8px);
+    margin: var(--space-3) 0 var(--space-2);
     color: var(--civi-muted);
     font-size: var(--font-xs);
     line-height: 1.5;
 }
 
 .activity-card h3 {
-    margin: 0 0 var(--spacing-sm, 11px);
+    margin: 0 0 var(--space-2);
     color: var(--civi-navy);
     font-family: var(--font-heading);
     font-size: var(--font-md);
@@ -274,7 +260,7 @@
 .activity-card-summary {
     display: -webkit-box;
     overflow: hidden;
-    margin: 0 0 var(--spacing-lg, 20px);
+    margin: 0 0 var(--space-5);
     color: var(--civi-muted);
     font-size: var(--font-base-sm);
     line-height: 1.7;
@@ -283,7 +269,7 @@
 }
 
 .activity-card-presenter {
-    margin: 0 0 var(--spacing-md, 16px);
+    margin: 0 0 var(--space-4);
     color: var(--civi-muted);
     font-size: var(--font-sm);
     line-height: 1.6;
@@ -292,9 +278,9 @@
 .activity-card-action {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs, 8px);
+    gap: var(--space-2);
     margin-top: auto;
-    padding-top: var(--spacing-xs, 2px);
+    padding-top: var(--space-1);
     color: var(--civi-green);
     font-size: var(--font-base-sm);
     font-weight: 700;
@@ -305,9 +291,9 @@
    ========================================================= */
 
 .activity-empty {
-    padding: var(--spacing-xl, 30px);
-    border: 1px dashed var(--civi-border);
-    border-radius: 8px;
+    padding: var(--space-8);
+    border: var(--border-width) dashed var(--civi-border);
+    border-radius: var(--radius-md);
     color: var(--civi-muted);
     text-align: center;
 }
@@ -317,7 +303,7 @@
 }
 
 .activity-results {
-    margin: var(--spacing-md, 18px) 0 0;
+    margin: var(--space-4) 0 0;
     color: var(--civi-muted);
     font-size: var(--font-sm);
     line-height: 1.5;
@@ -334,74 +320,57 @@
 @media (max-width: 900px) {
     .activity-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--spacing-md, 18px);
+        gap: var(--space-4);
     }
 
     .activity-section + .activity-section {
-        margin-top: var(--spacing-2xl, 48px);
-        padding-top: var(--spacing-xl, 34px);
+        margin-top: var(--space-12);
+        padding-top: var(--space-8);
     }
 }
 
 @media (max-width: 580px) {
     .activity-page {
-        padding-top: var(--spacing-md, 18px);
-        padding-bottom: var(--spacing-xl, 34px);
+        padding-top: var(--space-4);
+        padding-bottom: var(--space-8);
     }
 
     .activity-page-header {
-        margin-bottom: var(--spacing-xl, 32px);
-    }
-
-    .activity-page .page_title,
-    .activity-page .page-title {
-        font-size: var(--font-2xl);
-        text-align: left;
+        margin-bottom: var(--space-8);
     }
 
     .activity-page-description {
-        margin-top: var(--spacing-sm, 12px);
-        font-size: var(--font-base-sm);
-        line-height: 1.75;
+        margin-top: var(--space-3);
     }
 
     .activity-section {
-        margin-top: var(--spacing-xl, 38px);
+        margin-top: var(--space-8);
     }
 
     .activity-section + .activity-section {
-        margin-top: var(--spacing-xl, 40px);
-        padding-top: var(--spacing-lg, 30px);
+        margin-top: var(--space-10);
+        padding-top: var(--space-6);
     }
 
     .activity-section-heading {
         align-items: flex-start;
         flex-direction: column;
-        gap: var(--spacing-sm, 10px);
-        margin-bottom: var(--spacing-md, 18px);
-    }
-
-    .activity-page .section_title,
-    .activity-page .section-title {
-        font-size: var(--font-xl);
-    }
-
-    .activity-section-description {
-        font-size: var(--font-base-sm);
+        gap: var(--space-2);
+        margin-bottom: var(--space-4);
     }
 
     .activity-year-filter {
-        gap: var(--spacing-xs, 8px);
-        margin: var(--spacing-md, 18px) 0 var(--spacing-md, 20px);
+        gap: var(--space-2);
+        margin: var(--space-4) 0;
     }
 
     .activity-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md, 15px);
+        gap: var(--space-4);
     }
 
     .activity-card-content {
-        padding: var(--spacing-md, 19px);
+        padding: var(--space-4);
     }
 
     .activity-card-summary {
@@ -409,7 +378,7 @@
     }
 }
 
-/* Reduced motion */
+/* Respect reduced-motion preferences */
 
 @media (prefers-reduced-motion: reduce) {
     .activity-year-btn,
