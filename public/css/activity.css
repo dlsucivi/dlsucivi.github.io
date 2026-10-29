@@ -1,8 +1,3 @@
-/* =========================================================
-   DLSU-CIVI ACTIVITIES PAGE
-   Uses shared typography and design tokens from index.css.
-   ========================================================= */
-
 .activity-page {
     width: 100%;
     min-width: 0;
@@ -17,11 +12,6 @@
 .activity-page *::after {
     box-sizing: border-box;
 }
-
-/* =========================================================
-   PAGE HEADER
-   Typography is inherited from index.css.
-   ========================================================= */
 
 .activity-page-header {
     margin-bottom: var(--space-10);
@@ -41,10 +31,6 @@
     font-size: var(--font-base);
     line-height: 1.8;
 }
-
-/* =========================================================
-   ACTIVITY SECTIONS
-   ========================================================= */
 
 .activity-section {
     min-width: 0;
@@ -78,10 +64,6 @@
     font-size: var(--font-base-sm);
     line-height: 1.7;
 }
-
-/* =========================================================
-   YEAR FILTER
-   ========================================================= */
 
 .activity-year-filter {
     display: flex;
@@ -124,10 +106,6 @@
     outline: 2px solid var(--civi-focus);
     outline-offset: 3px;
 }
-
-/* =========================================================
-   ACTIVITY CARD GRID
-   ========================================================= */
 
 .activity-grid {
     display: grid;
@@ -175,8 +153,6 @@
     outline-offset: -3px;
 }
 
-/* Card image */
-
 .activity-card-image {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -197,8 +173,6 @@
     transform: scale(1.025);
 }
 
-/* Card content */
-
 .activity-card-content {
     display: flex;
     min-width: 0;
@@ -207,8 +181,6 @@
     align-items: flex-start;
     padding: var(--space-5);
 }
-
-/* Category labels */
 
 .activity-category {
     display: inline-block;
@@ -232,8 +204,6 @@
     background: var(--civi-surface-muted);
     color: var(--civi-navy);
 }
-
-/* Card text */
 
 .activity-card-date {
     margin: var(--space-3) 0 var(--space-2);
@@ -286,10 +256,6 @@
     font-weight: 700;
 }
 
-/* =========================================================
-   EMPTY STATE AND RESULTS
-   ========================================================= */
-
 .activity-empty {
     padding: var(--space-8);
     border: var(--border-width) dashed var(--civi-border);
@@ -312,10 +278,6 @@
 .activity-results:empty {
     display: none;
 }
-
-/* =========================================================
-   RESPONSIVE LAYOUT
-   ========================================================= */
 
 @media (max-width: 900px) {
     .activity-grid {
@@ -377,8 +339,6 @@
         -webkit-line-clamp: unset;
     }
 }
-
-/* Respect reduced-motion preferences */
 
 @media (prefers-reduced-motion: reduce) {
     .activity-year-btn,
